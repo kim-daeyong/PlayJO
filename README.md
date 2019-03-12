@@ -16,6 +16,7 @@
 * Spring Security
 * JPA
 * Bootstraps
+* Maven
 
 -----------------
 
