@@ -17,6 +17,8 @@
 * JPA
 * Bootstraps
 * Maven
+* Lombok
+* thymeleaf
 
 -----------------
 
