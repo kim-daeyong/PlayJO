@@ -17,7 +17,7 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long board_no;
+    private Long review_no;
 
     @Column(length = 255)
     private String nickName;
