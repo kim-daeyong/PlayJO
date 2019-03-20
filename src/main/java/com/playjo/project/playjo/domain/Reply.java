@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "reply")
@@ -27,16 +26,12 @@ public class Reply {
     @Column(length = 255)
     private String nickName;
 
-    @Column(name = "regdate")
-    private Date regDate;
-
 
     @ManyToOne
     @JoinColumn(name = "review_no")
     @JsonIgnore
     private Review review;
 
-    public Reply() {
-        regDate = new Date();
-    }
+
+
 }
