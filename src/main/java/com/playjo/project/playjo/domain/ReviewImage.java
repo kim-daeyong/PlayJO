@@ -15,7 +15,7 @@ public class ReviewImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long image_no;
+    private Long reviewImg_no;
 
     @Column(length = 255)
     private String name; // 오리지널 파일 명
@@ -30,5 +30,8 @@ public class ReviewImage {
     @Column( name = "regdate")
     private Date regdate;
 
+    @ManyToOne
+    @JoinColumn(name = "review_no")
+    private Review review;
 
 }
