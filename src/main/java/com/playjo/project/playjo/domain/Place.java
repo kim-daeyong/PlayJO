@@ -7,16 +7,16 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="list_place")
+@Table(name = "list_place")
 @Setter
 @Getter
 
-public class list_place {
+public class Place {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int board_no;
 
-    @Column(length=255)
+    @Column(length = 255)
     private String name;
     @Column(length = 255)
     private String value1;
@@ -32,8 +32,6 @@ public class list_place {
     private Long readcount;
     @Column(length = 5)
     private int ratingAVG;
-
-
 
 
 }

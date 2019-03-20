@@ -15,7 +15,8 @@ import java.util.List;
 @Setter
 @Getter
 
-public class notice {
+public class Notice {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int notice_no;
@@ -27,9 +28,10 @@ public class notice {
     @JoinColumn(name ="user")
     private List<User> userList;
 
-    public notice(){
+    public Notice(){
         userList = new ArrayList<>();
     }
+
 
 
 }

@@ -15,7 +15,7 @@ import java.util.List;
 @Getter
 public class User {
 
-    @Id
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long user_no;
 
@@ -53,10 +53,7 @@ public class User {
     private List<Notice> notice;
 
     @OneToMany(mappedBy = "wishlist")
-    private List<Wishlist> wishlist;
-
-
-
+    private List<Wish> wishlist;
 
 
 }

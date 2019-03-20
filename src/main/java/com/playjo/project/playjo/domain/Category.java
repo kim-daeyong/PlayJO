@@ -6,20 +6,22 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.List;
 
+
 @Entity
 @Table(name="category")
 @Setter
 @Getter
 
 
-public class category {
+
+public class Category {
 
     @Column(length=255)
     private int category_no;
 
     @OneToMany
-    @JoinColumn(name = "list_place")
-    private List<category> categoryList;
+  @JoinColumn(name = "list_place")
+    private List<Category> categoryList;
 
 
 

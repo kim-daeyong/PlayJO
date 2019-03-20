@@ -30,8 +30,5 @@ public class ReviewImage {
     @Column( name = "regdate")
     private Date regdate;
 
-    @ManyToOne
-    @JoinColumn(name = "board_no")
-    private Review review;
 
 }

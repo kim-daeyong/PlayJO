@@ -31,11 +31,8 @@ public class Review {
     @Lob
     private String content;
 
-    @Column( name = "regdate")
+    @Column(name = "regdate")
     private Date regdate;
-
-
-
 
 
     @ManyToOne
@@ -44,7 +41,7 @@ public class Review {
 
     @ManyToOne
     @JoinColumn(name = "board_no")
-    private ListPlace listPlace;
+    private Place Place;
 
     @OneToMany(mappedBy = "review")
     private List<Reply> reply;
@@ -55,8 +52,9 @@ public class Review {
 
 
     public Review() {
-        regdate = new Date;
+        regdate = new Date();
         reply = new ArrayList<>();
         reviewImage = new ArrayList<>();
     }
+
 }

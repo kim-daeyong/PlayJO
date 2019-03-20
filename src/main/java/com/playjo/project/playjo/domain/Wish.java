@@ -12,7 +12,8 @@ import java.util.List;
 @Table(name = "wishlist")
 @Setter
 @Getter
-public class wishlist {
+public class Wish{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int board_no;
@@ -25,11 +26,12 @@ public class wishlist {
     @Column(length = 255)
     private int user_user_no;
 
+
     @OneToMany
     @JoinColumn(name = "user")
-    private List<user> userList;
+    private List<User> userList;
 
-    public wishlist() {
+    public Wish() {
 
         userList = new ArrayList<>();
     }

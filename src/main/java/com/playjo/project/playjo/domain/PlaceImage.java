@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "list_image")
 @Setter
 @Getter
-public class list_image {
+public class PlaceImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int image_no;
@@ -23,8 +23,6 @@ public class list_image {
     @Column(length = 255)
     private int length;
 
-    @OneToOne
-    @JoinColumn(name="list_place_board_no")
-    private list_place list_place;
+
 
 }
