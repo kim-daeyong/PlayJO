@@ -38,5 +38,7 @@ public class Reply {
 
     public Reply() {
         regDate = new Date();
+
+        
     }
 }
