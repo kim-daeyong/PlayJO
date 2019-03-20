@@ -16,7 +16,7 @@ public class Reply {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long board_no;
+    private Long reply_no;
 
 
     @Lob
@@ -28,7 +28,7 @@ public class Reply {
 
 
     @ManyToOne
-    @JoinColumn(name = "board_no")
+    @JoinColumn(name = "review_no")
     @JsonIgnore
     private Review review;
 
