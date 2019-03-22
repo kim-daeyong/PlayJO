@@ -4,10 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
-@Table(name = "list_place")
+@Table(name = "place")
 @Setter
 @Getter
 
@@ -33,5 +35,25 @@ public class Place {
     @Column(length = 5)
     private int ratingAVG;
 
+    @ManyToOne
+    @JoinColumn(name = "category")
+    private List<Category> category_no;
 
+
+    @OneToMany(mappedBy = "placeImage")
+    private List<PlaceImage> placeImage;
+
+    @OneToMany(mappedBy = "review")
+    private List<Review> review_no;
+
+    @OneToMany(mappedBy = "place",
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    private List<PlaceImage> placeimage;
+
+    public Place() {
+        regdate = new Date();
+        category_no = new ArrayList<>();
+        placeImage = new ArrayList<>();
+
+    }
 }

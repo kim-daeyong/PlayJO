@@ -40,6 +40,7 @@ public class User {
     @Column(name = "regdate")
     private Date regDate;
 
+
     @OneToMany(mappedBy = "review")
     private List<Review> review;
 
@@ -52,11 +53,10 @@ public class User {
 
     public User() {
         regDate = new Date();
+        review = new ArrayList<>();
         notice = new ArrayList<>();
         wish = new ArrayList<>();
-        review = new ArrayList<>();
 
     }
-
 
 }

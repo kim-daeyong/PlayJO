@@ -24,14 +24,13 @@ public class Notice {
     @Lob
     private String content;
 
-    @OneToOne
-    @JoinColumn(name ="user")
+    @ManyToOne
+    @JoinColumn(name = "user")
     private List<User> userList;
 
-    public Notice(){
+    public Notice() {
         userList = new ArrayList<>();
     }
-
 
 
 }
