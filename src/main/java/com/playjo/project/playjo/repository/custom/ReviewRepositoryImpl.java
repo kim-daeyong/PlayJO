@@ -30,7 +30,6 @@ public class ReviewRepositoryImpl extends QuerydslRepositorySupport implements R
         }
 
         searchWhere(wearchKind, searStr, qreview, jpqlQuery)
-
         return null;
     }
 
