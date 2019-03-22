@@ -38,10 +38,7 @@ public class Place {
     @ManyToOne
     @JoinColumn(name = "cotegory_no")
     private List<Category> category;
-
-
-
-
+    
     @OneToMany(mappedBy = "review_no")
     private List<Review> reviews;
 
