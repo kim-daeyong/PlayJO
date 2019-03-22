@@ -16,7 +16,7 @@ public class Wish {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int boardNo;
+    private int wish_no;
     @Column(length = 45)
     public String category;
     @Column(length = 255)

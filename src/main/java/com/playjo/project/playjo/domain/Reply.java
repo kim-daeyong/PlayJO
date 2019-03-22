@@ -17,7 +17,7 @@ public class Reply {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long replyNo;
+    private Long reply_no;
 
 
     @Lob

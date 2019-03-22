@@ -19,7 +19,7 @@ public class Notice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int noticeNo;
+    private int notice_no;
 
     @Lob
     private String content;

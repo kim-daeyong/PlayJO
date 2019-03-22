@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "place")
@@ -37,7 +38,7 @@ public class Place {
 
     @ManyToOne
     @JoinColumn(name = "category")
-    private List<Category> categoryNo;
+    private List<Category> category_no;
 
 
     @OneToMany(mappedBy = "placeImage")
@@ -46,13 +47,16 @@ public class Place {
     @OneToMany(mappedBy = "review")
     private List<Review> reviewNo;
 
-    @OneToMany(mappedBy = "place",
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private List<PlaceImage> placeImg;
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(name = "place_wish",
+            joinColumns = {@JoinColumn(name = "place_no",referencedColumnName = "place_no")},
+            inverseJoinColumns = {@JoinColumn(name = "wish_no", referencedColumnName = "wish_no")}
+    )
+    private Set<Wish> wish;
 
     public Place() {
         regdate = new Date();
-        categoryNo = new ArrayList<>();
+        category_no = new ArrayList<>();
         placeImage = new ArrayList<>();
 
     }
