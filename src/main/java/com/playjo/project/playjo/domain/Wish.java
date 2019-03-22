@@ -25,11 +25,11 @@ public class Wish {
     private String location;
 
     @ManyToOne
-    @JoinColumn(name = "user")
-    private List<User> userList;
+    @JoinColumn(name = "user_no")
+    private List<User> users;
 
     public Wish() {
 
-        userList = new ArrayList<>();
+        users = new ArrayList<>();
     }
 }

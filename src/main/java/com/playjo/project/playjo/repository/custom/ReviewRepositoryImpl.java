@@ -16,12 +16,20 @@ public class ReviewRepositoryImpl extends QuerydslRepositorySupport implements R
     }
 
     @Override
-    public List<Review> getReviews(Long categoryId, int start, int limit, String searchKind, String searchStr) {
+    public List<Review> getReviews(Long place_no, int start, int limit, String searchKind, String searchStr) {
 
        QReview qReview = QReview.review;
         JPQLQuery<Review> jpqlQuery = from(qReview).innerJoin(qReview.user).fetchJoin()
-                                        .innerJoin(qReview.place)
+                                        .innerJoin(qReview.place).fetchJoin()
+                                        .leftJoin(qReview.reviewImages).fetchJoin()
+                                        .distinct();
 
+        if(place_no != null){
+
+            jpqlQuery.where(qReview.place.place_no.eq(place_no));
+        }
+
+        searchWhere(wearchKind, searStr, qreview, jpqlQuery)
         return null;
     }
 

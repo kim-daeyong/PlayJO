@@ -17,7 +17,6 @@ public class Category {
     @Column(length = 255)
     private int category_no;
 
-    @Column(name = "cateName")
     private String cateName;
 
     @OneToMany(mappedBy = "place")
