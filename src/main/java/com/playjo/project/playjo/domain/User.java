@@ -42,20 +42,20 @@ public class User {
 
 
     @OneToMany(mappedBy = "review")
-    private List<Review> review;
+    private List<Review> reviews;
 
     @OneToMany(mappedBy = "notice")
-    private List<Notice> notice;
+    private List<Notice> notices;
 
     @OneToMany(mappedBy = "wish")
-    private List<Wish> wish;
+    private List<Wish> wishs;
 
 
     public User() {
         regDate = new Date();
-        review = new ArrayList<>();
-        notice = new ArrayList<>();
-        wish = new ArrayList<>();
+        reviews = new ArrayList<>();
+        notices = new ArrayList<>();
+        wishs = new ArrayList<>();
 
     }
 

@@ -34,27 +34,26 @@ public class Review {
     @Column(name = "regdate")
     private Date regdate;
 
-
     @ManyToOne
     @JoinColumn(name = "user_no")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "board_no")
-    private Place Place;
+    @JoinColumn(name = "place_no")
+    private Place place;
 
     @OneToMany(mappedBy = "review")
-    private List<Reply> reply;
+    private List<Reply> replys;
 
     @OneToMany(mappedBy = "review",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private List<ReviewImage> reviewImage;
+    private List<ReviewImage> reviewImages;
 
 
     public Review() {
         regdate = new Date();
-        reply = new ArrayList<>();
-        reviewImage = new ArrayList<>();
+        replys = new ArrayList<>();
+        reviewImages = new ArrayList<>();
     }
 
 }
