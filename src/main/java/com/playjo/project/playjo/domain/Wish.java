@@ -16,16 +16,13 @@ public class Wish {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int board_no;
+    private int boardNo;
     @Column(length = 45)
     public String category;
     @Column(length = 255)
     private String name;
     @Column(length = 255)
     private String location;
-    @Column(length = 255)
-    private int user_user_no;
-
 
     @ManyToOne
     @JoinColumn(name = "user")
@@ -36,5 +33,3 @@ public class Wish {
         userList = new ArrayList<>();
     }
 }
-
-

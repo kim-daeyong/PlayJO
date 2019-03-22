@@ -16,7 +16,7 @@ import java.util.List;
 public class Place {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int board_no;
+    private int boardNo;
 
     @Column(length = 255)
     private String name;
@@ -37,22 +37,22 @@ public class Place {
 
     @ManyToOne
     @JoinColumn(name = "category")
-    private List<Category> category_no;
+    private List<Category> categoryNo;
 
 
     @OneToMany(mappedBy = "placeImage")
     private List<PlaceImage> placeImage;
 
     @OneToMany(mappedBy = "review")
-    private List<Review> review_no;
+    private List<Review> reviewNo;
 
     @OneToMany(mappedBy = "place",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private List<PlaceImage> placeimage;
+    private List<PlaceImage> placeImg;
 
     public Place() {
         regdate = new Date();
-        category_no = new ArrayList<>();
+        categoryNo = new ArrayList<>();
         placeImage = new ArrayList<>();
 
     }

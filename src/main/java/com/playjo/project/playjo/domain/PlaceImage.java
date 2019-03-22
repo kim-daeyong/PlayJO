@@ -14,19 +14,19 @@ import java.util.Date;
 public class PlaceImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int placeimg_no;
+    private int placeImgNo;
 
     @Column
     private String name;
     @Column(length = 255)
-    private String savefilename;
+    private String saveFileName;
     @Column(length = 255)
-    private String mimetype;
+    private String mimeType;
     @Column(length = 255)
     private int length;
 
     @Column(name = "regdate")
-    private Date regdate;
+    private Date regDate;
 
     @ManyToOne
     @JoinColumn(name = "place_no")
