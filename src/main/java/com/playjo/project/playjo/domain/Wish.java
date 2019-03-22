@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "wishlist")
+@Table(name = "wish")
 @Setter
 @Getter
-public class Wish{
+public class Wish {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +27,7 @@ public class Wish{
     private int user_user_no;
 
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "user")
     private List<User> userList;
 
@@ -35,6 +35,6 @@ public class Wish{
 
         userList = new ArrayList<>();
     }
-
-
 }
+
+
