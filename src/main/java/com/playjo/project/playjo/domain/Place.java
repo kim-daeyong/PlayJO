@@ -36,24 +36,23 @@ public class Place {
     private int ratingAVG;
 
     @ManyToOne
-    @JoinColumn(name = "category")
-    private List<Category> category_no;
+    @JoinColumn(name = "cotegory_no")
+    private List<Category> category;
 
 
-    @OneToMany(mappedBy = "placeImage")
-    private List<PlaceImage> placeImage;
 
-    @OneToMany(mappedBy = "review")
-    private List<Review> review_no;
+
+    @OneToMany(mappedBy = "review_no")
+    private List<Review> reviews;
 
     @OneToMany(mappedBy = "place",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    private List<PlaceImage> placeimage;
+    private List<PlaceImage> placeImages;
 
     public Place() {
         regdate = new Date();
-        category_no = new ArrayList<>();
-        placeImage = new ArrayList<>();
+        category = new ArrayList<>();
+        placeImages = new ArrayList<>();
 
     }
 }
