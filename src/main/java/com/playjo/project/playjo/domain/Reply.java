@@ -36,6 +36,10 @@ public class Reply {
     @JsonIgnore
     private Review review;
 
+    @ManyToOne
+    @JoinColumn(name = "user_no")
+    private User user;
+
     public Reply() {
         regDate = new Date();
 
