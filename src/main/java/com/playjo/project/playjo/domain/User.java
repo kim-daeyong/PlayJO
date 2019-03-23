@@ -44,6 +44,9 @@ public class User {
     @OneToMany(mappedBy = "review")
     private List<Review> reviews;
 
+    @OneToMany(mappedBy = "reply")
+    private List<Reply> reply;
+
     @OneToMany(mappedBy = "notice")
     private List<Notice> notices;
 
