@@ -17,7 +17,7 @@ import java.util.Set;
 public class Place {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int boardNo;
+    private Long place_no;
 
     @Column(length = 255)
     private String name;
@@ -30,7 +30,7 @@ public class Place {
     @Column(length = 255)
     private String explain;
     @Column(name = "regdate")
-    private Date regdate;
+    private Date regDate;
     @Column(length = 255)
     private Long readcount;
     @Column(length = 5)
@@ -55,7 +55,7 @@ public class Place {
     private Set<Wish> wish;
 
     public Place() {
-        regdate = new Date();
+        regDate = new Date();
         category = new ArrayList<>();
         placeImages = new ArrayList<>();
 
