@@ -45,7 +45,7 @@ public class User {
     private List<Review> reviews;
 
     @OneToMany(mappedBy = "reply")
-    private List<Reply> reply;
+    private List<Reply> replys;
 
     @OneToMany(mappedBy = "notice")
     private List<Notice> notices;
@@ -59,6 +59,7 @@ public class User {
         reviews = new ArrayList<>();
         notices = new ArrayList<>();
         wishs = new ArrayList<>();
+        replys = new ArrayList<>();
 
     }
 

@@ -73,13 +73,13 @@ insert into review values ('13', 'daeyong', '3','wow3','awesome3',now(),'1','13'
 insert into review values ('14', 'daeyong', '2','wow3','awesome3',now(),'1','14');
 insert into review values ('15', 'daeyong', '1','wow3','awesome3',now(),'1','15');
 
-insert into reply values('1','wowooow','daeyong','1',now());
-insert into reply values('2','wowooow2','daeyong','1',now());
-insert into reply values('3','wowooow3','daeyong','1',now());
-insert into reply values('4','wowooow4','daeyong','1',now());
-insert into reply values('5','wowooow5','daeyong','1',now());
-insert into reply values('6','wowooow6','daeyong','1',now());
-insert into reply values('7','wowooow7','daeyong','1',now());
+insert into reply values('1','wowooow','daeyong','1',now(),'1');
+insert into reply values('2','wowooow2','daeyong','1',now(),'1');
+insert into reply values('3','wowooow3','daeyong','1',now(),'1');
+insert into reply values('4','wowooow4','daeyong','1',now(),'1');
+insert into reply values('5','wowooow5','daeyong','1',now(),'1');
+insert into reply values('6','wowooow6','daeyong','1',now(),'1');
+insert into reply values('7','wowooow7','daeyong','1',now(),'1');
 
 
 
