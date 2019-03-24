@@ -8,13 +8,13 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "placeImage")
+@Table(name = "place_image")
 @Setter
 @Getter
 public class PlaceImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int placeImg_no;
+    private Long placeImg_no;
 
     @Column
     private String name;
@@ -23,7 +23,7 @@ public class PlaceImage {
     @Column(length = 255)
     private String mimeType;
     @Column(length = 255)
-    private int length;
+    private Long length;
 
     @Column(name = "regdate")
     private Date regDate;

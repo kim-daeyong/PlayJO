@@ -19,7 +19,7 @@ public class ReviewImage {
 
     @Column(length = 255)
     private String name; // 오리지널 파일 명
-    private long length;
+    private Long length;
 
     @Column(length = 255)
     private String saveFileName;
