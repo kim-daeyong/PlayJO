@@ -4,16 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+
 
 @Entity
 @Table(name = "place")
 @Setter
 @Getter
-
 public class Place {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,27 +34,27 @@ public class Place {
     private int ratingAVG;
 
     @ManyToOne
-    @JoinColumn(name = "cotegory_no")
-    private List<Category> category;
-    
-    @OneToMany(mappedBy = "review_no")
+    @JoinColumn(name = "category_no")
+    private Category category;
+
+    @OneToMany(mappedBy = "place")
     private List<Review> reviews;
 
     @OneToMany(mappedBy = "place",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<PlaceImage> placeImages;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(name = "place_wish",
+    @ManyToMany
+    @JoinTable(name = "wish_has_place",
             joinColumns = {@JoinColumn(name = "place_no",referencedColumnName = "place_no")},
             inverseJoinColumns = {@JoinColumn(name = "wish_no", referencedColumnName = "wish_no")}
     )
-    private Set<Wish> wish;
+    private Set<Wish> wishs;
 
     public Place() {
         regDate = new Date();
-        category = new ArrayList<>();
         placeImages = new ArrayList<>();
+        wishs = new HashSet<>();
 
     }
 }

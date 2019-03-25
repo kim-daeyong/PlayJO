@@ -26,10 +26,10 @@ public class Wish {
 
     @ManyToOne
     @JoinColumn(name = "user_no")
-    private List<User> users;
+    private User user;
 
-    public Wish() {
-
-        users = new ArrayList<>();
-    }
+//    public Wish() {
+//
+//        users = new ArrayList<>();
+//    }
 }

@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 public interface NoticeRepository extends JpaRepository<Notice,Long> {
-    @Query("SELECT a from Notice a WHERE a.email =  :email")
-    public Notice getNoticeByuserEmail(@Param("email")String email);
+//    @Query("SELECT a from Notice a WHERE a.email =  :email")
+//    public Notice getNoticeByuserEmail(@Param("email")String email);
 
 
 }
