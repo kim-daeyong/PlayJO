@@ -41,25 +41,25 @@ public class User {
     private Date regDate;
 
 
-    @OneToMany(mappedBy = "review")
+    @OneToMany(mappedBy = "user")
     private List<Review> reviews;
 
-    @OneToMany(mappedBy = "reply")
+    @OneToMany(mappedBy = "user")
     private List<Reply> replys;
 
-    @OneToMany(mappedBy = "notice")
+    @OneToMany(mappedBy = "user")
     private List<Notice> notices;
 
-    @OneToMany(mappedBy = "wish")
+    @OneToMany(mappedBy = "user")
     private List<Wish> wishs;
 
 
     public User() {
         regDate = new Date();
-        reviews = new ArrayList<>();
-        notices = new ArrayList<>();
-        wishs = new ArrayList<>();
-        replys = new ArrayList<>();
+//        reviews = new ArrayList<>();
+//        notices = new ArrayList<>();
+//        wishs = new ArrayList<>();
+//        replys = new ArrayList<>();
 
     }
 

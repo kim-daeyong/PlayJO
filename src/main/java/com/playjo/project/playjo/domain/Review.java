@@ -52,7 +52,7 @@ public class Review {
 
     public Review() {
         regdate = new Date();
-        replys = new ArrayList<>();
+//        replys = new ArrayList<>();
         reviewImages = new ArrayList<>();
     }
 
