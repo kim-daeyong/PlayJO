@@ -20,7 +20,7 @@ public class Place {
     @Column(name="place_no")
     private Long placeNo;
 
-    @Column
+    @Column(name ="name")
     private String name;
 
     @Column
@@ -33,7 +33,7 @@ public class Place {
     private String location;
 
     @Lob
-    private String explain;
+    private String detail;
 
     @Column(name = "reg_date")
     private Date regDate;
@@ -41,8 +41,8 @@ public class Place {
     @Column(name = "read_count")
     private Long readCount;
 
-    @Column(name = "rating_avg")
-    private int ratingAVG;
+    @Column(name = "rating_Avg")
+    private int ratingAvg;
 
     @ManyToOne
     @JoinColumn(name = "category_no")

@@ -17,7 +17,8 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_no;
+    @Column(name="user_no")
+    private Long userNo;
 
     @Column
     private int role;
@@ -28,10 +29,10 @@ public class User {
     @Column(length = 255)
     private String name;
 
-    @Column(length = 255)
+    @Column(length = 100)
     private String nickName;
 
-    @Column(length = 255)
+    @Column(length = 100)
     private String password;
 
     @Column
@@ -56,10 +57,10 @@ public class User {
 
     public User() {
         regDate = new Date();
-//        reviews = new ArrayList<>();
-//        notices = new ArrayList<>();
-//        wishs = new ArrayList<>();
-//        replys = new ArrayList<>();
+        reviews = new ArrayList<>();
+        notices = new ArrayList<>();
+        wishs = new ArrayList<>();
+        replys = new ArrayList<>();
 
     }
 

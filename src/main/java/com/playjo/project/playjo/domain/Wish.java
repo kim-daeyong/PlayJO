@@ -16,12 +16,13 @@ public class Wish {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long wish_no;
+    @Column(name="wish_no")
+    private Long wishNo;
     @Column(length = 45)
     public String category;
     @Column(length = 255)
     private String name;
-    @Column(length = 255)
+    @Lob
     private String location;
 
     @ManyToOne
@@ -37,6 +38,7 @@ public class Wish {
     private List<Place> places;
 
     public Wish() {
+
         places = new ArrayList<>();
     }
 
