@@ -1,5 +1,6 @@
 package com.playjo.project.playjo.domain;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,57 +8,56 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 @Entity
-@Table(name = "place")
-@Setter
+@Table(name="place")
 @Getter
-
+@Setter
 public class Place {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long place_no;
+    @Column(name="place_no")
+    private Long placeNo;
 
-    @Column(length = 255)
+    @Column
     private String name;
-    @Column(length = 255)
+
+    @Column
     private String value1;
-    @Column(length = 255)
+
+    @Column
     private String value2;
-    @Column(length = 255)
+
+    @Lob
     private String location;
-    @Column(length = 255)
+
+    @Lob
     private String explain;
-    @Column(name = "regdate")
+
+    @Column(name = "reg_date")
     private Date regDate;
-    @Column(length = 255)
-    private Long readcount;
-    @Column(length = 5)
+
+    @Column(name = "read_count")
+    private Long readCount;
+
+    @Column(name = "rating_avg")
     private int ratingAVG;
 
     @ManyToOne
-    @JoinColumn(name = "cotegory_no")
-    private List<Category> category;
-    
-    @OneToMany(mappedBy = "review_no")
-    private List<Review> reviews;
+    @JoinColumn(name = "category_no")
+    private Category category;
 
     @OneToMany(mappedBy = "place",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<PlaceImage> placeImages;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(name = "place_wish",
-            joinColumns = {@JoinColumn(name = "place_no",referencedColumnName = "place_no")},
-            inverseJoinColumns = {@JoinColumn(name = "wish_no", referencedColumnName = "wish_no")}
-    )
-    private Set<Wish> wish;
+    @OneToMany(mappedBy = "place")
+    private List<Review> reivews;
 
     public Place() {
         regDate = new Date();
-        category = new ArrayList<>();
         placeImages = new ArrayList<>();
-
+        reivews = new ArrayList<>();
     }
 }

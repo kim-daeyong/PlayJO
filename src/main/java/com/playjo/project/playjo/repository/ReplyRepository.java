@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface ReplyRepository extends JpaRepository<Reply, Long> {
 
-    @Query("SELECT r From Reply r WHERE r.review.review_no = :review_no")
-    public List<Reply> getReply(@Param("review_no") Long review_no);
+//    @Query("SELECT r From Reply r WHERE r.review.review_no = :review_no")
+//    public List<Reply> getReply(@Param("review_no") Long review_no);
 }
 

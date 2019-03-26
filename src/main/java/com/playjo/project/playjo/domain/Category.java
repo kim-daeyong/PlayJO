@@ -2,6 +2,7 @@ package com.playjo.project.playjo.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import javax.persistence.Id;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,18 +15,18 @@ import java.util.List;
 @Getter
 public class Category {
 
-    @Column(length = 255)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int category_no;
 
     @Column(length = 255)
     private String cateName;
 
-    @OneToMany(mappedBy = "place")
-    private List<Place> placeList;
+    @OneToMany(mappedBy = "category")
+    private List<Place> places;
 
     public Category() {
-        placeList = new ArrayList<>();
+        places = new ArrayList<>();
+
     }
-
-
 }

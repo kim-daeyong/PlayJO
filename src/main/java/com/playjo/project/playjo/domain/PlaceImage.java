@@ -1,9 +1,7 @@
 package com.playjo.project.playjo.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -33,4 +31,8 @@ public class PlaceImage {
     private Place place;
 
 
+
+    public PlaceImage() {
+        regDate = new Date();
+    }
 }

@@ -26,10 +26,18 @@ public class Wish {
 
     @ManyToOne
     @JoinColumn(name = "user_no")
-    private List<User> users;
+    private User user;
+
+
+    @ManyToMany
+    @JoinTable(name = "wishplace",
+            joinColumns = {@JoinColumn(name = "wish_wish_no",referencedColumnName = "wish_no")},
+            inverseJoinColumns = {@JoinColumn(name = "place_place_no", referencedColumnName = "place_no")}
+    )
+    private List<Place> places;
 
     public Wish() {
-
-        users = new ArrayList<>();
+        places = new ArrayList<>();
     }
+
 }
