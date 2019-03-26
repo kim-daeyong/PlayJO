@@ -24,10 +24,9 @@ public class Category {
 
     @OneToMany(mappedBy = "category")
     private List<Place> places;
-//
-//    public Category() {
-//        places = new ArrayList<>();
-//    }
 
+    public Category() {
+        places = new ArrayList<>();
 
+    }
 }

@@ -49,10 +49,9 @@ public class Review {
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<ReviewImage> reviewImages;
 
-
     public Review() {
         regdate = new Date();
-//        replys = new ArrayList<>();
+        replys = new ArrayList<>();
         reviewImages = new ArrayList<>();
     }
 

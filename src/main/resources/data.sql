@@ -1,4 +1,4 @@
-
+/*
 
 insert  into user values(1,19900108 , 'kdy2353@naver.com', 'kim','daeyong','123456',now(),1);
 insert  into user values(2,1011, 'dabinchoi@naver.com', 'choi','dabin','123456',now(),0);
