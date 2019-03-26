@@ -1,9 +1,7 @@
 package com.playjo.project.playjo.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.Date;
 
@@ -14,7 +12,8 @@ import java.util.Date;
 public class PlaceImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long placeImg_no;
+    @Column(name="placeimg_no")
+    private Long placeImgNo;
 
     @Column
     private String name;
@@ -33,4 +32,8 @@ public class PlaceImage {
     private Place place;
 
 
+
+    public PlaceImage() {
+        regDate = new Date();
+    }
 }

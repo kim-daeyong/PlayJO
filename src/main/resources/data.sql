@@ -11,23 +11,24 @@ insert into category value(2, 'eatery');
 insert into category value(3, 'sight');
 
 
-insert into place values(1, 'a', '1', '10000', 'seoul', 'ppap', now(),11,5, 1);
-insert into place values(2, 'b', '20', '20000', 'daegu', 'ppap2', now(),22,4, 1);
-insert into place values(3, 'c', '30', '30000', 'daejoen', 'ppap3', now(),33, 3, 1);
-insert into place values(4, 'd', '40', '40000', 'busan', 'ppap4', now(),44, 2, 1);
-insert into place values(5, 'e', '50', '50000', 'mockpo', 'ppap5', now(),55, 1,1);
-insert into place values(6, '2aasd', '12', '100002', 'seoul2', '2ppap', now(),112,2, 2);
-insert into place values(7, '2basd', '202', '200002', 'daegu2', '2ppap2', now(),222,3,2);
-insert into place values(8, '2casd', '302', '300002', 'daejoen2', '2ppap3', now(),332,4,2);
-insert into place values(9, '2dasd', '402', '400002', 'busan2', '2ppap4', now(),442,5,2);
-insert into place values(10, '2easd', '502', '500002', 'mockpo2', '2ppap5', now(),552,1,2);
-insert into place values(11, '3azxc', '11', '100003', 'seoul3', '3ppap', now(),113,3,3);
-insert into place values(12, '3bzxc', '201', '200003', 'daegu3', '3ppap2', now(),223,4,3);
-insert into place values(13, '3czxc', '301', '300003', 'daejoen3', '3ppap3', now(),333,5,3);
-insert into place values(14, '3dzxc', '401', '400003', 'busan3', '3ppap4', now(),443,1,3);
-insert into place values(15, '3ezxc', '501', '500003', 'mockpo3', '3ppap5', now(),553,2,3);
+insert into place values(1, '자존심', '중요', '찬종1',5,111,now(),'에오','10000',1 );
+insert into place values(2, '자존심1', '중요', '찬종2',5,111,now(),'에오','10000',1 );
+insert into place values(3, '자존심2', '중요', '찬종3',5,111,now(),'에오','10000',1 );
+insert into place values(4, '자존심3', '중요', '찬종4',5,111,now(),'에오','10000',1 );
+insert into place values(5, '자존심4', '중요', '찬종5',5,111,now(),'에오','10000',1 );
+insert into place values(6, '자존심5', '중요', '찬종6',5,111,now(),'에오','10000',2 );
+insert into place values(7, '자존심6', '중요', '찬종7',5,111,now(),'에오','10000',2 );
+insert into place values(8, '자존심7', '중요', '찬종8',5,111,now(),'에오','10000',2 );
+insert into place values(9, '자존심8', '중요', '찬종9',5,111,now(),'에오','10000',2 );
+insert into place values(10, '자존심9', '중요', '찬종10',5,111,now(),'에오','10000',2 );
+insert into place values(11, '자존심10', '중요', '찬종11',5,111,now(),'에오','10000',3 );
+insert into place values(12, '자존심11', '중요', '찬종12',5,111,now(),'에오','10000',3 );
+insert into place values(13, '자존심12', '중요', '찬종13',5,111,now(),'에오','10000',3 );
+insert into place values(14, '자존심13', '중요', '찬종14',5,111,now(),'에오','10000',3 );
+insert into place values(15, '자존심14', '중요', '찬종15',5,111,now(),'에오','10000',3 );
+insert into place values(16, '자존심15', '중요', '찬종16',5,111,now(),'에오','10000',1 );
 
-/*
+
 
 INSERT INTO NOTICE VALUES(1,'공지사항1번입니다',1);
 INSERT INTO NOTICE VALUES(2,'공지사항2번입니다',1);
@@ -35,7 +36,7 @@ INSERT INTO NOTICE VALUES(3,'공지사항3번입니다',1);
 INSERT INTO NOTICE VALUES(4,'공지사항4번입니다',1);
 INSERT INTO NOTICE VALUES(5,'공지사항5번입니다',1);
 
-
+/*
 insert into review values (1,'wow','daeyong','5',now(),'awesome','1','1');
 insert into review values (2,'wow1','daeyong','5',now(),'awesome2','2','1');
 insert into review values (3,'wow2','daeyong','5',now(),'awesome3','3','1');

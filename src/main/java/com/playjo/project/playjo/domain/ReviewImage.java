@@ -15,7 +15,8 @@ public class ReviewImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reviewImg_no;
+    @Column(name="reviewimg_no")
+    private Long reviewImgNo;
 
     @Column(length = 255)
     private String name; // 오리지널 파일 명

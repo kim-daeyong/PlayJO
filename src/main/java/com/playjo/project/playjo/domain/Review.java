@@ -17,7 +17,8 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long review_no;
+    @Column(name="review_no")
+    private Long reviewNo;
 
     @Column(length = 255)
     private String nickName;
@@ -49,10 +50,9 @@ public class Review {
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<ReviewImage> reviewImages;
 
-
     public Review() {
         regdate = new Date();
-//        replys = new ArrayList<>();
+        replys = new ArrayList<>();
         reviewImages = new ArrayList<>();
     }
 

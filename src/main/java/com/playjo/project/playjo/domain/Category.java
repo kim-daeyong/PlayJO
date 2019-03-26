@@ -17,17 +17,17 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int category_no;
+    @Column(name="category_no")
+    private int categoryNo;
 
-    @Column(length = 255)
+    @Column(length = 45)
     private String cateName;
 
     @OneToMany(mappedBy = "category")
     private List<Place> places;
-//
-//    public Category() {
-//        places = new ArrayList<>();
-//    }
 
+    public Category() {
+        places = new ArrayList<>();
 
+    }
 }

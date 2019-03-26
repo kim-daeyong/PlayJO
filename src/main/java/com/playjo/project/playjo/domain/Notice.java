@@ -19,7 +19,8 @@ public class Notice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long notice_no;
+    @Column(name="notice_no")
+    private Long noticeNo;
 
     @Lob
     private String content;

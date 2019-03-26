@@ -16,20 +16,30 @@ public class Wish {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long wish_no;
+    @Column(name="wish_no")
+    private Long wishNo;
     @Column(length = 45)
     public String category;
     @Column(length = 255)
     private String name;
-    @Column(length = 255)
+    @Lob
     private String location;
 
     @ManyToOne
     @JoinColumn(name = "user_no")
     private User user;
 
-//    public Wish() {
-//
-//        users = new ArrayList<>();
-//    }
+
+    @ManyToMany
+    @JoinTable(name = "wishplace",
+            joinColumns = {@JoinColumn(name = "wish_wish_no",referencedColumnName = "wish_no")},
+            inverseJoinColumns = {@JoinColumn(name = "place_place_no", referencedColumnName = "place_no")}
+    )
+    private List<Place> places;
+
+    public Wish() {
+
+        places = new ArrayList<>();
+    }
+
 }
