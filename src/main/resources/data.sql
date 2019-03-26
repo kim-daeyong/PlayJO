@@ -36,7 +36,7 @@ INSERT INTO NOTICE VALUES(3,'공지사항3번입니다',1);
 INSERT INTO NOTICE VALUES(4,'공지사항4번입니다',1);
 INSERT INTO NOTICE VALUES(5,'공지사항5번입니다',1);
 
-/*
+
 insert into review values (1,'wow','daeyong','5',now(),'awesome','1','1');
 insert into review values (2,'wow1','daeyong','5',now(),'awesome2','2','1');
 insert into review values (3,'wow2','daeyong','5',now(),'awesome3','3','1');
@@ -73,4 +73,3 @@ insert into wish values('5', '3', 'a', 'daegu3','1');
 
 
 
-*/
