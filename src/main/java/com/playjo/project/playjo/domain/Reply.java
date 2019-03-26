@@ -17,11 +17,11 @@ public class Reply {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reply_no;
+    @Column(name="reply_no")
+    private Long replyNo;
 
 
     @Lob
-    @Column(name="content", length=512)
     private String content;
 
     @Column(length = 255)

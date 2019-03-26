@@ -12,7 +12,8 @@ import java.util.Date;
 public class PlaceImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long placeImg_no;
+    @Column(name="placeimg_no")
+    private Long placeImgNo;
 
     @Column
     private String name;
