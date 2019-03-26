@@ -1,5 +1,6 @@
 package com.playjo.project.playjo.repotest;
 
+import com.playjo.project.playjo.domain.Reply;
 import com.playjo.project.playjo.domain.User;
 import com.playjo.project.playjo.repository.UserRepository;
 import org.junit.Test;
@@ -33,9 +34,16 @@ public class UserRepoTest {
 
         List<User> all = userRepository.findAll();
         for(User list : all){
-            System.out.println(list);
+            System.out.println(list.toString());
         }
     }
+
+    @Test
+    public void findReply(){
+
+//        List<Reply> all = userRepository.
+    }
+
 //
 //    @Test
 //    public void findMyGrades() throws Exception {
