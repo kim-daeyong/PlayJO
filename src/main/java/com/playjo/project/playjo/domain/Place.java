@@ -42,7 +42,7 @@ public class Place {
     private Long readCount;
 
     @Column(name = "rating_Avg")
-    private int ratingAvg;
+    private Double ratingAvg;
 
     @ManyToOne
     @JoinColumn(name = "category_no")
