@@ -31,13 +31,17 @@ public class UserRepoTest {
 
     @Test
     public void findAll(){
-
-        List<User> all = userRepository.findAll();
-        for(User list : all){
-            System.out.println(list.toString());
+    List<User> all = userRepository.findAll();
+    for(User list : all){
+        System.out.println(list.getEmail());
         }
     }
 
+    @Test
+    public void findById() {
+        Optional<User> user = userRepository.findById(2L);
+        System.out.println(user.get().getEmail());
+    }
     @Test
     public void findReply(){
 
