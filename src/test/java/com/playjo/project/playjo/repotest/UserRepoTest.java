@@ -1,6 +1,5 @@
 package com.playjo.project.playjo.repotest;
 
-import com.playjo.project.playjo.domain.Reply;
 import com.playjo.project.playjo.domain.User;
 import com.playjo.project.playjo.repository.UserRepository;
 import org.junit.Test;
@@ -10,43 +9,46 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-@AutoConfigureTestDatabase(replace= AutoConfigureTestDatabase.Replace.NONE)
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class UserRepoTest {
-
 
     @Autowired
     UserRepository userRepository;
 
     @Test
-    public void init(){
+    public void init() {
 
     }
 
     @Test
-    public void findAll(){
-    List<User> all = userRepository.findAll();
-    for(User list : all){
-        System.out.println(list.getEmail());
+    public void findAll() throws Exception {
+        List<User> all = userRepository.findAll();
+        for (User list : all) {
+            System.out.println(list.getEmail());
         }
     }
 
+    /*  @Test
+      public void findById() {
+          Optional<User> user = userRepository.findById(2L);
+          System.out.println(user.get().getEmail());
+      }*/
+/*
     @Test
-    public void findById() {
-        Optional<User> user = userRepository.findById(2L);
-        System.out.println(user.get().getEmail());
-    }
-    @Test
-    public void findReply(){
+    public void placeByEmail() throws Exception {
 
-//        List<Reply> all = userRepository.
     }
+
+    @Test
+    public void findReply() {
+
+    }
+*/
 
 //
 //    @Test
