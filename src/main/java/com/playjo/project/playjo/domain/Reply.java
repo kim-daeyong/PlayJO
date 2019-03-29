@@ -17,8 +17,8 @@ public class Reply {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="reply_no")
-    private Long replyNo;
+    @Column(name="id")
+    private Long id;
 
 
     @Lob
@@ -32,13 +32,13 @@ public class Reply {
 
 
     @ManyToOne
-    @JoinColumn(name = "review_no")
+    @JoinColumn(name = "review_id")
     @JsonIgnore
-    private Review review;
+    private Review reviewReply;
 
     @ManyToOne
-    @JoinColumn(name = "user_no")
-    private User user;
+    @JoinColumn(name = "user_id")
+    private User userReply;
 
     public Reply() {
         regDate = new Date();

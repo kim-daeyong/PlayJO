@@ -16,8 +16,8 @@ public class Wish {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="wish_no")
-    private Long wishNo;
+    @Column(name="id")
+    private Long id;
     @Column(length = 45)
     public String category;
     @Column(length = 255)
@@ -26,16 +26,25 @@ public class Wish {
     private String location;
 
     @ManyToOne
-    @JoinColumn(name = "user_no")
-    private User user;
+    @JoinColumn(name = "user_id")
+    private User userWish;
 
+//
+//    @ManyToMany
+//    @JoinTable(name = "wishplace",
+//            joinColumns = {@JoinColumn(name = "wish_wish_no",referencedColumnName = "wish_no")},
+//            inverseJoinColumns = {@JoinColumn(name = "place_place_no", referencedColumnName = "place_no")}
+//    )
+//    private List<Place> places;
 
     @ManyToMany
-    @JoinTable(name = "wishplace",
-            joinColumns = {@JoinColumn(name = "wish_wish_no",referencedColumnName = "wish_no")},
-            inverseJoinColumns = {@JoinColumn(name = "place_place_no", referencedColumnName = "place_no")}
+    @JoinTable(
+            name = "wishplace",
+            joinColumns = @JoinColumn(name = "wish_id"),
+            inverseJoinColumns = @JoinColumn(name = "place_id")
     )
     private List<Place> places;
+
 
     public Wish() {
 

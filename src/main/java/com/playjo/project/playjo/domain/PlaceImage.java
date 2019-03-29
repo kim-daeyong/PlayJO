@@ -6,14 +6,14 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "place_image")
+@Table(name = "placeimage")
 @Setter
 @Getter
 public class PlaceImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="placeimg_no")
-    private Long placeImgNo;
+    @Column(name="id")
+    private Long id;
 
     @Column
     private String name;
@@ -28,8 +28,8 @@ public class PlaceImage {
     private Date regDate;
 
     @ManyToOne
-    @JoinColumn(name = "place_no")
-    private Place place;
+    @JoinColumn(name = "place_id")
+    private Place placeImg;
 
 
 

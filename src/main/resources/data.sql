@@ -14,21 +14,21 @@ insert into category value(3, 'sight');
 
 
 insert into place values(1, '자존심', '중요1', '찬종1',5,111,now(),'에오','10000',1 );
-insert into place values(2, '자존심1', '중요2', '찬종2',5,111,now(),'에오','10000',1 );
-insert into place values(3, '자존심2', '중요3', '찬종3',5,111,now(),'에오','10000',1 );
-insert into place values(4, '자존심3', '중요4', '찬종4',5,111,now(),'에오','10000',1 );
-insert into place values(5, '자존심4', '중요5', '찬종5',5,111,now(),'에오','10000',1 );
+insert into place values(2, '자존심1', '중요2', '찬종2',4,111,now(),'에오','10000',1 );
+insert into place values(3, '자존심2', '중요3', '찬종3',3,111,now(),'에오','10000',1 );
+insert into place values(4, '자존심3', '중요4', '찬종4',2,111,now(),'에오','10000',1 );
+insert into place values(5, '자존심4', '중요5', '찬종5',1,111,now(),'에오','10000',1 );
 insert into place values(6, '자존심5', '중요6', '찬종6',5,111,now(),'에오','10000',2 );
-insert into place values(7, '자존심6', '중요7', '찬종7',5,111,now(),'에오','10000',2 );
-insert into place values(8, '자존심7', '중요8', '찬종8',5,111,now(),'에오','10000',2 );
-insert into place values(9, '자존심8', '중요9', '찬종9',5,111,now(),'에오','10000',2 );
-insert into place values(10, '자존심9', '중요10', '찬종10',5,111,now(),'에오','10000',2 );
+insert into place values(7, '자존심6', '중요7', '찬종7',4,111,now(),'에오','10000',2 );
+insert into place values(8, '자존심7', '중요8', '찬종8',3,111,now(),'에오','10000',2 );
+insert into place values(9, '자존심8', '중요9', '찬종9',2,111,now(),'에오','10000',2 );
+insert into place values(10, '자존심9', '중요10', '찬종10',1,111,now(),'에오','10000',2 );
 insert into place values(11, '자존심10', '중요11', '찬종11',5,111,now(),'에오','10000',3 );
-insert into place values(12, '자존심11', '중요12', '찬종12',5,111,now(),'에오','10000',3 );
-insert into place values(13, '자존심12', '중요13', '찬종13',5,111,now(),'에오','10000',3 );
-insert into place values(14, '자존심13', '중요14', '찬종14',5,111,now(),'에오','10000',3 );
-insert into place values(15, '자존심14', '중요15', '찬종15',5,111,now(),'에오','10000',3 );
-insert into place values(16, '자존심15', '중요16', '찬종16',5,111,now(),'에오','10000',1 );
+insert into place values(12, '자존심11', '중요12', '찬종12',4,111,now(),'에오','10000',3 );
+insert into place values(13, '자존심12', '중요13', '찬종13',3,111,now(),'에오','10000',3 );
+insert into place values(14, '자존심13', '중요14', '찬종14',2,111,now(),'에오','10000',3 );
+insert into place values(15, '자존심14', '중요15', '찬종15',1,111,now(),'에오','10000',3 );
+insert into place values(16, '자존심15', '중요16', '찬종16',2,111,now(),'에오','10000',1 );
 
 
 
@@ -80,4 +80,17 @@ insert into wish values(10, 'sight', '찬종11', '중요11',2);
 insert into wish values(11, 'sight', '찬종11', '중요11',3);
 insert into wish values(12, 'sight', '찬종11', '중요11',4);
 
+
+insert into wishplace value(1,1);
+insert into wishplace value(2,1);
+insert into wishplace value(3,1);
+insert into wishplace value(4,1);
+insert into wishplace value(5,6);
+insert into wishplace value(6,6);
+insert into wishplace value(7,6);
+insert into wishplace value(8,6);
+insert into wishplace value(9,11);
+insert into wishplace value(10,11);
+insert into wishplace value(11,11);
+insert into wishplace value(12,11);
 

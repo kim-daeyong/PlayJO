@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface WishRepository extends JpaRepository<Wish,Long> {
 
-    @Query("SELECT w FROM Wish w WHERE w.userNO=:userNo")
-    List<Wish> wishByUserNo(@Param("user_no") Long userNo);
+//    @Query("SELECT w FROM Wish w WHERE w.userNO=:userNo")
+//    List<Wish> wishByUserNo(@Param("user_no") Long userNo);
 
 }
