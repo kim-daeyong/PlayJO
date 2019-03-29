@@ -25,7 +25,7 @@ public class Wish {
     @Lob
     private String location;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User userWish;
 

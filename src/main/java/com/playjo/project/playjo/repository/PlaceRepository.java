@@ -7,29 +7,34 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import java.util.List;
+
 
 public interface PlaceRepository extends JpaRepository<Place, Long> {
-//    @Query(value = "SELECT P FROM Place p INNER JOIN FETCH p.category ORDER BY P.id DESC ",
-//            countQuery = "SELECT count(p) FROM Post p")
-//    public Page<Place> getPlace(Pageable pageable);
-//
-//    @Query("SELECT distinct p FROM Place p INNER JOIN FETCH p.category INNER JOIN FETCH p.account LEFT JOIN FETCH p.imageFiles WHERE p.id = :id")
-//    public Place getPlace(@Param("id")Long id);
-//
+
+    //Place의 리스트를 각 카테고리에 해당하는 값으로 불러와 평점avr(추천)로 정렬한다.
+    @Query("SELECT p FROM Place p " +
+            "inner join p.categoryid c " +
+            "LEFT JOIN p.placeImages " +
+            "where c.id = :id order by p.ratingAvg desc")
+    Page<Place> getPlacesRatingByCateNo(@Param("id") int id,Pageable pageable);
+
+    //Place의 리스트를 각 카테고리에 해당하는 값으로 불러와 ReadCount순(인기)으로 정렬한다.
+    @Query("SELECT p FROM Place p " +
+            "inner join p.categoryid c " +
+            "LEFT JOIN p.placeImages" +
+            " where c.id = :id order by p.readCount desc")
+    Page<Place> getPlacesReadByCateNo(@Param("id") int id,Pageable pageable);
+
+    //Place의 상세보기
+    @Query("SELECT distinct p FROM Place p " +
+            "INNER JOIN fetch p.categoryid " +
+            "LEFT JOIN fetch p.placeImages WHERE p.id = :id")
+    public Place getPlaceDetail(@Param("id") Long id);
+
+    //랜덤하게 불러오기(메인 및 각 Place Page용
+//    @Query(value = "SELECT p FROM Place p inner join p.categoryid c where c.id = :id order by RAND",nativeQuery = true)
+//    public Place getPlaceRandom(@Param("id") Long id);
 
 
-//  //Place의 리스트를 각 카테고리에 해당하는 값으로 불러온다.
-//    @Query("SELECT p FROM Place p inner join fetch p.categoryNo where p.categoryNo = :categoryNo order by p.ratingAvg desc")
-//    public Page<Place> getPlacesByCateNo(@Param("categoryNo") int categoryNo, Pageable pageable);
-
-    //Place의 리스트를 각 카테고리에 해당하는 값으로 불러온다.
-    @Query("SELECT p FROM Place p inner join p.categoryid c where c.id = :id order by p.ratingAvg desc")
-    Page<Place> getPlacesByCateNo(@Param("id") int id,Pageable pageable);
-
-
-
-//    @Query(value = "SELECT p FROM Place p order by p.ratingAvg desc")
-//    public Page<Place> getPlaces(Pageable pageable);
 
 }
