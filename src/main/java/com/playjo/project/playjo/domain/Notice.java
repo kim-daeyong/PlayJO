@@ -19,15 +19,15 @@ public class Notice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="notice_no")
-    private Long noticeNo;
+    @Column(name="id")
+    private Long id;
 
     @Lob
     private String content;
 
     @ManyToOne
-    @JoinColumn(name = "user_no")
-    private User user;
+    @JoinColumn(name = "user_id")
+    private User userNotice;
 
 //    public Notice() {
 //        users = new ArrayList<>();

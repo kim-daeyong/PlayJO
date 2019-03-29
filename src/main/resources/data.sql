@@ -81,3 +81,16 @@ insert into wish values(11, 'sight', '찬종11', '중요11',3);
 insert into wish values(12, 'sight', '찬종11', '중요11',4);
 
 
+insert into wishplace value(1,1);
+insert into wishplace value(2,1);
+insert into wishplace value(3,1);
+insert into wishplace value(4,1);
+insert into wishplace value(5,6);
+insert into wishplace value(6,6);
+insert into wishplace value(7,6);
+insert into wishplace value(8,6);
+insert into wishplace value(9,11);
+insert into wishplace value(10,11);
+insert into wishplace value(11,11);
+insert into wishplace value(12,11);
+

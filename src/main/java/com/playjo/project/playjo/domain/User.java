@@ -17,8 +17,8 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="user_no")
-    private Long userNo;
+    @Column(name="id")
+    private Long id;
 
     @Column
     private int role;
@@ -42,16 +42,16 @@ public class User {
     private Date regDate;
 
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "userReview")
     private List<Review> reviews;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "userReply")
     private List<Reply> replys;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "userNotice")
     private List<Notice> notices;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "userWish")
     private List<Wish> wishs;
 
 
