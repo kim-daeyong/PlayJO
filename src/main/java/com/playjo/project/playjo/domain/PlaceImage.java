@@ -27,7 +27,7 @@ public class PlaceImage {
     @Column(name = "regdate")
     private Date regDate;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "place_id")
     private Place placeImg;
 

@@ -42,16 +42,16 @@ public class User {
     private Date regDate;
 
 
-    @OneToMany(mappedBy = "userReview")
+    @OneToMany(mappedBy = "userReview",fetch=FetchType.LAZY)
     private List<Review> reviews;
 
-    @OneToMany(mappedBy = "userReply")
+    @OneToMany(mappedBy = "userReply",fetch=FetchType.LAZY)
     private List<Reply> replys;
 
-    @OneToMany(mappedBy = "userNotice")
+    @OneToMany(mappedBy = "userNotice",fetch=FetchType.LAZY)
     private List<Notice> notices;
 
-    @OneToMany(mappedBy = "userWish")
+    @OneToMany(mappedBy = "userWish",fetch=FetchType.LAZY)
     private List<Wish> wishs;
 
 
