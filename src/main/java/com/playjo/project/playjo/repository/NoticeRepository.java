@@ -19,6 +19,5 @@ public interface NoticeRepository extends JpaRepository<Notice,Long> {
     Page<Notice> getNotice(Pageable pageable);
 
 
-    public List<Notice> getNotices(@Param("noticeNo")Long noticeNo);
-*/
+
 }
