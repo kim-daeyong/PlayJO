@@ -35,18 +35,18 @@ public class Review {
     @Column(name = "regdate")
     private Date regdate;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User userReview;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "place_id")
     private Place placeReview;
 
-    @OneToMany(mappedBy = "reviewReply", cascade = {CascadeType.REMOVE})
+    @OneToMany(mappedBy = "reviewReply",fetch=FetchType.LAZY, cascade = {CascadeType.REMOVE})
     private List<Reply> replys;
 
-    @OneToMany(mappedBy = "reviewImg",
+    @OneToMany(mappedBy = "reviewImg",fetch=FetchType.LAZY,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<ReviewImage> reviewImages;
 
@@ -55,5 +55,13 @@ public class Review {
         replys = new ArrayList<>();
         reviewImages = new ArrayList<>();
     }
+
+
+//        public void addReviewImg(ReviewImage reviewImage) {
+//        if(reviewImage == null)
+//            reviewImage = new ArrayList<>();
+//            reviewImage.setReview(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
+//            reviewImage.add(reviewImage);
+//    }
 
 }
