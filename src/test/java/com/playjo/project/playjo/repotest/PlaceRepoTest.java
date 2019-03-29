@@ -39,17 +39,46 @@ public class PlaceRepoTest {
 
 
     @Test
-    public void findrating() throws Exception{
+    public void getPlaceCateOrderByRating() throws Exception{
         Pageable page = PageRequest.of(1, 3);
-        Page<Place> all = placeRepository.getPlacesByCateNo(1,page);
+        Page<Place> all = placeRepository.getPlacesByCateNo(1, page);
         System.out.println("place cate 1");
         System.out.println("전체 건수 : " + all.getTotalElements());
         for(Place place : all){
             System.out.println("Name,위치 : " + place.getName()+ " " + place.getLocation());
-            System.out.println(" readCount : " + place.getRatingAvg());
-            System.out.println(" view : " + place.getReadCount());
+            System.out.println(" ratingave : " + place.getRatingAvg());
         }
     }
+
+//    @Test
+//    public void getPlaceCateOrderByRating() throws Exception{
+//        Pageable page = PageRequest.of(1, 3);
+//        Page<Place> all = placeRepository.getPlaces(page);
+//        System.out.println("place cate 1");
+//        System.out.println("전체 건수 : " + all.getTotalElements());
+//        for(Place place : all){
+//            System.out.println("Name,위치 : " + place.getName()+ " " + place.getLocation());
+//            System.out.println(" readCount : " + place.getRatingAvg());
+//            System.out.println(" view : " + place.getReadCount());
+//        }
+//    }
+
+
+
+
+
+//    @Test
+//    public void getPlaces() throws Exception{
+//
+//    Pageable pageable = PageRequest.of(0,5);
+//    Page<Place> posts = placeRepository.getPlaces(pageable);
+////        Assert.assertEquals(5, posts.getSize());
+//        for(Place post : posts){
+//        System.out.println(post.getName());
+//        System.out.println(post.getCategoryid().getCateName());
+//    }
+//}
+
 
 
 }

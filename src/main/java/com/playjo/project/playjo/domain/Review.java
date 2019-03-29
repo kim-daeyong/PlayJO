@@ -17,8 +17,8 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="review_no")
-    private Long reviewNo;
+    @Column(name="id")
+    private Long id;
 
     @Column(length = 255)
     private String nickName;
@@ -36,17 +36,17 @@ public class Review {
     private Date regdate;
 
     @ManyToOne
-    @JoinColumn(name = "user_no")
-    private User user;
+    @JoinColumn(name = "user_id")
+    private User userReview;
 
     @ManyToOne
-    @JoinColumn(name = "place_no")
-    private Place place;
+    @JoinColumn(name = "place_id")
+    private Place placeReview;
 
-    @OneToMany(mappedBy = "review")
+    @OneToMany(mappedBy = "reviewReply", cascade = {CascadeType.REMOVE})
     private List<Reply> replys;
 
-    @OneToMany(mappedBy = "review",
+    @OneToMany(mappedBy = "reviewImg",
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<ReviewImage> reviewImages;
 

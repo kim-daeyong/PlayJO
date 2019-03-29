@@ -8,15 +8,15 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "review_image")
+@Table(name = "reviewimage")
 @Setter
 @Getter
 public class ReviewImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="reviewimg_no")
-    private Long reviewImgNo;
+    @Column(name="id")
+    private Long id;
 
     @Column(length = 255)
     private String name; // 오리지널 파일 명
@@ -32,7 +32,7 @@ public class ReviewImage {
     private Date regdate;
 
     @ManyToOne
-    @JoinColumn(name = "review_no")
-    private Review review;
+    @JoinColumn(name = "review_id")
+    private Review reviewImg;
 
 }

@@ -17,13 +17,13 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="category_no")
-    private int categoryNo;
+    @Column(name="id")
+    private int id;
 
     @Column(length = 45)
     private String cateName;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "categoryid")
     private List<Place> places;
 
     public Category() {
