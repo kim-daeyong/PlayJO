@@ -66,11 +66,11 @@ public class Place {
         wishPlace = new ArrayList<>();
     }
 
-//    public void addPlaceImg(PlaceImage placeImage) {
-//        if(placeImage == null)
-//            placeImage = new ArrayList<>();
-//        placeImage.setPlace(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
-//        placeImage.add(imageFile);
-//    }
+    public void addPlaceImg(PlaceImage placeImg) {
+        if(placeImages == null)
+            placeImages = new ArrayList<>();
+        placeImg.setPlace(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
+        placeImages.add(placeImg);
+    }
 
 }
