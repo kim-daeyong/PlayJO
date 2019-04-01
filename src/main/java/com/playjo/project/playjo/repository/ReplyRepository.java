@@ -15,26 +15,22 @@ import java.util.List;
 public interface ReplyRepository extends JpaRepository<Reply, Long> {
 
 
-    @Query("SELECT rr FROM Reply rr where rr.review.id = :id order by rr.id desc")
-    Page<Reply> getReplyByReplyNo(@Param("id")Long id, Pageable pageable);
 
+   /* @Query("SELECT rp FROM Reply rp inner join rp.reviewReply rr where rr.id = :id order by rr.id desc")
+    Page<Reply> getReplyByReviewNo(@Param("id") Long id, Pageable pageable);
+*/
+/*
+@Query(value = "SELECT rp FROM Reply rp INNER JOIN FETCH rp.content ORDER BY rp.id DESC",
+    countQuery = "SELECT count(rp) FROM Reply rp")
+    Page<Reply> getReplys(Pageable pageable);
 
-    /*  @Query(value = "SELECT re FROM Reply re INNER JOIN FETCH re.review ORDER BY re.replyNo DESC",
-              countQuery = "SELECT count(re) FROM Reply re")
-      public Page<Reply> getReviews(Pageable pageable);
+@Query("SELECT distinct rp FROM Reply rp INNER JOIN FETCH rp.reviewReply INNER JOIN FETCH rp.userReply LEFT JOIN FETCH rp.userReply WHERE rp.id = :id")
+    public Reply getReply(@Param("id") Long id);
+*/
+/*@Query("SELECT rp FROM Reply rp inner join rp.reviewReply rr where rr.id order by rr.id desc")
+Page<Reply> getReplyByReplyNo(@Param("id")Long id,Pageable pageable);*/
 
-      @Query("SELECT distinct re FROM Reply re INNER JOIN FETCH re.review INNER JOIN FETCH re.user LEFT JOIN FETCH re.user WHERE re.replyNo = :replyNo")
-      public Reply getReply(@Param("replyNO") Long replyNo);
+@Query("SELECT rr FROM Reply rr where rr.review.id = :id order by rr.id desc")
+   Page<Reply> getReplyByReplyNo(@Param("id")Long id,Pageable pageable);
 
-  */
-
-
-
-//    @Query("SELECT r From Reply r WHERE r.review.review_no = :review_no")
-//    public List<Reply> getReply(@Param("review_no") Long review_no);
-
-
-
-/*    @Query("SELECT re FROM Reply re WHERE re.review.reviewNo = :reviewNo")
-    public List<Reply> getReplys(@Param("reviewNo")Long reviewNo);*/
 }

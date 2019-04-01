@@ -28,6 +28,8 @@ public interface ReviewRepository extends JpaRepository<Review, Long>{
 
     @Query("SELECT distinct r FROM Review r INNER JOIN FETCH r.place INNER JOIN FETCH r.user LEFT JOIN FETCH r.reviewImages WHERE r.reviewNo = :reviewNo")
     public Review getReview(@Param("reviewNo") Long reviewNo);*/
+
+//Review의 리스트를 각 placereview에 해당하는 값으로 불러온다.
 @Query("SELECT r FROM Review r inner join r.placeReview re where re.id = :id order by r.id desc")
     Page<Review> getReviewsByPlaceNo(@Param("id")Long id,Pageable pageable);
 
