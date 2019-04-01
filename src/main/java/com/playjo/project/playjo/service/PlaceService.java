@@ -42,5 +42,14 @@ public class PlaceService {
         return placeRepository.getPlaceDetail(id);
     }
 
+    @Transactional(readOnly = true)
+    public List<Place> grtPlaces(int page, Long categoryId, String searchKind, String searchStr){
+
+        int limit = 3;
+        int start = page * limit - limit;
+//        return placeRepository.getPlacesRatingByCateNo(categoryId, start, limit, searchKind, searchStr)
+        return null;
+    }
+
 
 }
