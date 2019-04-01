@@ -30,10 +30,8 @@ public interface ReplyRepository extends JpaRepository<Reply, Long> {
 /*@Query("SELECT rp FROM Reply rp inner join rp.reviewReply rr where rr.id order by rr.id desc")
 Page<Reply> getReplyByReplyNo(@Param("id")Long id,Pageable pageable);*/
 
+@Query("SELECT rr FROM Reply rr where rr.reviewReply.id = :id order by rr.id desc")
+   Page<Reply> getReplyByReplyNo(@Param("id")Long id,Pageable pageable);
 
-
-
-    @Query("SELECT rr FROM Reply rr where rr.reviewReply.id= :id order by rr.id desc")
-    Page<Reply> getReplyByReplyNo(@Param("id")Long id,Pageable pageable);
 
 }
