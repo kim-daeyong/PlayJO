@@ -31,15 +31,15 @@ public class ReviewRepoTest {
 
     @Test
     public void getReviewsByPlaceNo() throws Exception {
-        Pageable page = PageRequest.of(1,5);
-        Page<Review> all = reviewRepository.getReviewsByPlaceNo(1L,page);
+        Pageable page = PageRequest.of(1, 5);
+        Page<Review> all = reviewRepository.getReviewsByPlaceNo(1L, page);
         System.out.println("Review 1");
        /* System.out.println("리뷰 전체 : "+all.getTotalElements());
         for(Review review : all){
             System.out.println("NAME "+review.getNickName());*/
 
-        }
-        }
+    }
+}
 
 
 
