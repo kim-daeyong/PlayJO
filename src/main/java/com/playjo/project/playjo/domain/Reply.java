@@ -31,12 +31,12 @@ public class Reply {
     private Date regDate;
 
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "review_id")
     @JsonIgnore
     private Review reviewReply;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User userReply;
 
@@ -45,4 +45,5 @@ public class Reply {
 
         
     }
+
 }

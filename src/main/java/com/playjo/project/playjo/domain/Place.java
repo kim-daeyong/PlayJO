@@ -44,15 +44,15 @@ public class Place {
     @Column(name = "rating_Avg")
     private Double ratingAvg;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category categoryid;
 
-    @OneToMany(mappedBy = "placeImg",
+    @OneToMany(mappedBy = "placeImg",fetch=FetchType.LAZY,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<PlaceImage> placeImages;
 
-    @OneToMany(mappedBy = "placeReview")
+    @OneToMany(mappedBy = "placeReview",fetch=FetchType.LAZY)
     private List<Review> reivews;
 
 
@@ -65,4 +65,12 @@ public class Place {
         reivews = new ArrayList<>();
         wishPlace = new ArrayList<>();
     }
+
+    public void addPlaceImg(PlaceImage placeImg) {
+        if(placeImages == null)
+            placeImages = new ArrayList<>();
+        placeImg.setPlace(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
+        placeImages.add(placeImg);
+    }
+
 }

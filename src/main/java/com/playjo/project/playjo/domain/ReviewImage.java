@@ -31,7 +31,7 @@ public class ReviewImage {
     @Column( name = "regdate")
     private Date regdate;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "review_id")
     private Review reviewImg;
 

@@ -25,7 +25,7 @@ public class Notice {
     @Lob
     private String content;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User userNotice;
 
