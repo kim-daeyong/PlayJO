@@ -14,13 +14,17 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 
 /*
+
     @Query("SELECT u FROM User u inner join u.email p where p.id = :id order by r.id desc")
     Page<User> getUserByEmail(@Param("id")Long id, Pageable pageable);
 */
+
 /*
 @Query("SELECT u from User u WHERE U.email = :email")
     public User getUserByEmail(@Param("email") String email);
 */
+@Query("SELECT u from User u WHERE u.id = : id")
+    public User getUserByEmail(@Param("id")String email);
 
 
 }

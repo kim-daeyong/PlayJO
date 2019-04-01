@@ -8,9 +8,9 @@ insert  into user values(5, 0801, 'andy@naver.com', 'min','andy','123456',now(),
 insert  into user values(6, 0801, 'dabinchoi@naver.com', 'choi','dabin','123456',now(),1);
 
 
-insert into category value(1, 'hotel');
-insert into category value(2, 'eatery');
-insert into category value(3, 'sight');
+insert into category values(1, 'hotel');
+insert into category values(2, 'eatery');
+insert into category values(3, 'sight');
 
 
 insert into place values(1, '자존심', '중요1', '찬종1',5,111,now(),'에오','10000',1 );
@@ -81,16 +81,16 @@ insert into wish values(11, 'sight', '찬종11', '중요11',3);
 insert into wish values(12, 'sight', '찬종11', '중요11',4);
 
 
-insert into wishplace value(1,1);
-insert into wishplace value(2,1);
-insert into wishplace value(3,1);
-insert into wishplace value(4,1);
-insert into wishplace value(5,6);
-insert into wishplace value(6,6);
-insert into wishplace value(7,6);
-insert into wishplace value(8,6);
-insert into wishplace value(9,11);
-insert into wishplace value(10,11);
-insert into wishplace value(11,11);
-insert into wishplace value(12,11);
+insert into wishplace values(1,1);
+insert into wishplace values(2,1);
+insert into wishplace values(3,1);
+insert into wishplace values(4,1);
+insert into wishplace values(5,6);
+insert into wishplace values(6,6);
+insert into wishplace values(7,6);
+insert into wishplace values(8,6);
+insert into wishplace values(9,11);
+insert into wishplace values(10,11);
+insert into wishplace values(11,11);
+insert into wishplace values(12,11);
 
