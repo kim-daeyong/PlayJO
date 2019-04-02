@@ -25,16 +25,16 @@ public class ReplyRepoTest {
     public void init() {
     }
 
-  /*  @Test
+   @Test
     public void getReplyByReviewNo() throws Exception{
         Pageable page = PageRequest.of(1,5);
-        Page<Reply> all = replyRepository.findAll(Pageable page);
+        Page<Reply> all = replyRepository.findAll(page);
 
         System.out.println("review");
-    *//*    for (Reply list : all) {
+        for (Reply list : all) {
             System.out.println(list);
-        }*//*
-    }*/
+        }
+    }
 
     @Test
     public void getReplyByReplyNo() throws Exception {
@@ -43,7 +43,8 @@ public class ReplyRepoTest {
         System.out.println("Reply 1");
         System.out.println("리뷰의 댓글 : "+all.getTotalElements());
         for(Reply reply : all){
-            System.out.println("NAME" + reply.getNickName());
+            System.out.println("NAME: " + reply.getNickName());
+            System.out.println("NAME: " + reply.getContent());
         }
     }
 

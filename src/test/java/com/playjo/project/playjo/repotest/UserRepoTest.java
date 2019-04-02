@@ -35,7 +35,9 @@ public class UserRepoTest {
     public void getUserByEmail(){
         List<User> all = userRepository.findAll();
         for (User list : all) {
-            System.out.println(list.getEmail());
+            System.out.println("이메일 : "+list.getEmail());
+            System.out.println("이름 : "+list.getName());
+            System.out.println("비밀번호 :"+list.getPassword());
         }
     }
 
