@@ -1,7 +1,9 @@
 package com.playjo.project.playjo.service;
 
 
+import com.playjo.project.playjo.domain.Category;
 import com.playjo.project.playjo.domain.Place;
+import com.playjo.project.playjo.domain.User;
 import com.playjo.project.playjo.repository.CategoryRepository;
 import com.playjo.project.playjo.repository.PlaceRepository;
 import com.playjo.project.playjo.repository.UserRepository;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -37,18 +40,29 @@ public class PlaceService {
 //
 //    }
 
+
+    @Transactional
+    public Place addPlace(Place place, Long categoryId){
+        Optional<Category> optionalCategory
+                = categoryRepository.findById(categoryId);
+        place.setCategoryid(optionalCategory.get());
+
+        return placeRepository.save(place);
+    }
+
     @Transactional(readOnly = true)
     public Place getPlace(Long id) {
         return placeRepository.getPlaceDetail(id);
     }
 
     @Transactional(readOnly = true)
-    public List<Place> grtPlaces(int page, Long categoryId, String searchKind, String searchStr){
+//    public List<Place> getPlaces(int page, Long categoryId, String searchKind, String searchStr){
+    public List<Place> getMainPlace(int page, Long categoryId){
 
         int limit = 3;
         int start = page * limit - limit;
-//        return placeRepository.getPlacesRatingByCateNo(categoryId, start, limit, searchKind, searchStr)
-        return null;
+//        return placeRepository.getPlacesRatingByCateNo(categoryId, start, limit, searchKind, searchStr);
+      return null;
     }
 
 
