@@ -66,11 +66,30 @@ public class Place {
         wishPlace = new ArrayList<>();
     }
 
-//    public void addPlaceImg(PlaceImage placeImg) {
-//        if(placeImages == null)
-//            placeImages = new ArrayList<>();
-//        placeImg.setPlace(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
-//        placeImages.add(placeImg);
+    public void addPlaceImg(PlaceImage placeImage) {
+        if(placeImages == null)
+            placeImages = new ArrayList<>();
+        placeImage.setPlaceImg(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
+        placeImages.add(placeImage);
+    }
+
+
+//    public String getShortContent(){
+//        if(content.length() > 100)
+//            return content.substring(0, 100);
+//        else
+//            return content;
 //    }
+//
+//    public String getStripTitle(){
+//        return StringEscapeUtils.escapeHtml4(title);
+//    }
+//
+//    public String getStripContent(){
+////        return Jsoup.parse(content).text();
+//        String str = StringEscapeUtils.escapeHtml4(content);
+//        return str.replaceAll("\n", "<br>");
+//    }
+
 
 }
