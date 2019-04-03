@@ -24,28 +24,15 @@ public class PlaceService {
     public final static String NAME_SEARCH = "name_search";
     public final static String TITLE_SEARCH = "title_search";
     public final static String CONTENT_SEARCH = "content_search";
-    public final static String TITLE_OR_CONTENT_SEARCH = "title_content_search";
-
-
-//    @Transactional(readOnly = true)
-//    public List<Place> getPlacesRating(int page, Long categoryId, String searchKind, String searchStr) {
-//        int limit = 5;
-//        int start = page * limit - limit;
-//        return placeRepository.getPlacesRatingByCateNo(categoryId, start, limit, searchKind, searchStr);
-//    }
-//    public List<Place> getPlacesRead(int page, Long categoryId, String searchKind, String searchStr) {
-//        int limit = 5;
-//        int start = page * limit - limit;
-//        return placeRepository.getPlacesRatingByCateNo(categoryId, start, limit, searchKind, searchStr);
-//
-//    }
+    public final static String LOCATION_SEARCH = "loacation_search";
+    public final static String TITLE_OR_CONTENT_OR_LOCATION_SEARCH = "title_content_location_search";
 
 
     @Transactional
     public Place addPlace(Place place, Long categoryId){
         Optional<Category> optionalCategory
                 = categoryRepository.findById(categoryId);
-        place.setCategoryid(optionalCategory.get());
+        place.setCategoryId(optionalCategory.get());
 
         return placeRepository.save(place);
     }
@@ -55,15 +42,25 @@ public class PlaceService {
         return placeRepository.getPlaceDetail(id);
     }
 
+
+
     @Transactional(readOnly = true)
-//    public List<Place> getPlaces(int page, Long categoryId, String searchKind, String searchStr){
-    public List<Place> getMainPlace(int page, Long categoryId){
+    public List<Place> mainPlacesReadcount(int page, Long categoryId, String searchKind, String searchStr){
 
         int limit = 3;
         int start = page * limit - limit;
-//        return placeRepository.getPlacesRatingByCateNo(categoryId, start, limit, searchKind, searchStr);
-      return null;
+        return placeRepository.getPlacesReadcount(categoryId, start, limit, searchKind, searchStr);
+
     }
+    @Transactional(readOnly = true)
+    public List<Place> mainPlacesRating(int page, Long categoryId, String searchKind, String searchStr){
+
+        int limit = 3;
+        int start = page * limit - limit;
+        return placeRepository.getPlacesRatingAvg(categoryId, start, limit, searchKind, searchStr);
+    }
+
+
 
 
 }

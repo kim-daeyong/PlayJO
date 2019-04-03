@@ -25,10 +25,12 @@ public class MainController {
             @RequestParam(name = "searchStr", required = false) String searchStr,
             Model model){
 
-        List<Place> places1 = placeService.getPlaces(page, categoryId, searchKind, searchStr);
-        model.addAttribute("plcaes1", places1);
-//        List<Place> places2 = placeService.getPlacesRead(page, categoryId, searchKind, searchStr);
-//        model.addAttribute("plcaes2", places2);
+        List<Place> orderReadCount = placeService.mainPlacesRating(page, categoryId, searchKind, searchStr);
+        model.addAttribute("plcaes1", orderReadCount);
+        List<Place> orderRatingAvg = placeService.mainPlacesReadcount(page, categoryId, searchKind, searchStr);
+        model.addAttribute("plcaes2", orderRatingAvg);
+
+
         return "index";
     }
 }

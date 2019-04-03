@@ -7,6 +7,10 @@ import java.util.List;
 public interface PlaceRepositoryCustum {
 
 
-    public List<Place> getPlaces(Long categoryId, int start, int limit, String searchKind, String searchStr);
+    public List<Place> getMainPlaces(Long categoryId, int start, int limit, String searchKind, String searchStr);
+
+    public List<Place> getPlacesReadcount(Long categoryId, int start, int limit, String searchKind, String searchStr);
+    public List<Place> getPlacesRatingAvg(Long categoryId, int start, int limit, String searchKind, String searchStr);
+
     public Long getPlaceReadcount(Long categoryId, String searchKind, String searchStr);
 }

@@ -1,6 +1,7 @@
 package com.playjo.project.playjo.repository;
 
 import com.playjo.project.playjo.domain.Place;
+import com.playjo.project.playjo.repository.Custum.PlaceRepositoryCustum;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 
 
 
-public interface PlaceRepository extends JpaRepository<Place, Long> {
+public interface PlaceRepository extends JpaRepository<Place, Long>, PlaceRepositoryCustum {
 
     //Place의 리스트를 각 카테고리에 해당하는 값으로 불러와 평점avr(추천)로 정렬한다.
     @Query("SELECT p FROM Place p " +
@@ -48,9 +49,7 @@ public interface PlaceRepository extends JpaRepository<Place, Long> {
     @Query("SELECT p FROM Place p " +
             "LEFT JOIN p.placeImages " +
             " order by p.ratingAvg desc")
-    Page<Place> getPlacesIdReadcount(@Param("id") int id,Pageable pageable);
-
-
+    Page<Place> getPlacesRatingAvg(@Param("id") int id,Pageable pageable);
 
 
     //Place의 상세보기
