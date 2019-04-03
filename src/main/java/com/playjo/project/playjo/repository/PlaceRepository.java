@@ -35,8 +35,22 @@ public interface PlaceRepository extends JpaRepository<Place, Long> {
     //Place의 리스트를 각 id로 로 정렬한다.
     @Query("SELECT p FROM Place p " +
             "LEFT JOIN p.placeImages " +
-            "where c.id = :id order by p.id desc")
+            " order by p.id desc")
     Page<Place> getPlacesId(@Param("id") int id,Pageable pageable);
+
+    //Place의 리스트를 각 readcount로 로 정렬한다.
+    @Query("SELECT p FROM Place p " +
+            "LEFT JOIN p.placeImages " +
+            " order by p.readCount desc")
+    Page<Place> getPlacesReadcount(@Param("id") int id,Pageable pageable);
+
+    //Place의 리스트를 각 ratingAvg로 로 정렬한다.
+    @Query("SELECT p FROM Place p " +
+            "LEFT JOIN p.placeImages " +
+            " order by p.ratingAvg desc")
+    Page<Place> getPlacesIdReadcount(@Param("id") int id,Pageable pageable);
+
+
 
 
     //Place의 상세보기
