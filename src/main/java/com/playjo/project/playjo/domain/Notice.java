@@ -27,7 +27,7 @@ public class Notice {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private User userNotice;
+    private User userId;
 
 //    public Notice() {
 //        users = new ArrayList<>();

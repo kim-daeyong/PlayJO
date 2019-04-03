@@ -33,6 +33,6 @@ public class ReviewImage {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "review_id")
-    private Review reviewImg;
+    private Review reviewId;
 
 }

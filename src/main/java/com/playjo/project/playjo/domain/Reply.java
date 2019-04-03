@@ -34,11 +34,11 @@ public class Reply {
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "review_id")
     @JsonIgnore
-    private Review reviewReply;
+    private Review reviewId;
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private User userReply;
+    private User userId;
 
     public Reply() {
         regDate = new Date();

@@ -46,13 +46,13 @@ public class Place {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "category_id")
-    private Category categoryid;
+    private Category categoryId;
 
-    @OneToMany(mappedBy = "placeImg",fetch=FetchType.LAZY,
+    @OneToMany(mappedBy = "placeId",fetch=FetchType.LAZY,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<PlaceImage> placeImages;
 
-    @OneToMany(mappedBy = "placeReview",fetch=FetchType.LAZY)
+    @OneToMany(mappedBy = "placeId",fetch=FetchType.LAZY)
     private List<Review> reivews;
 
 
@@ -69,7 +69,7 @@ public class Place {
     public void addPlaceImg(PlaceImage placeImage) {
         if(placeImages == null)
             placeImages = new ArrayList<>();
-        placeImage.setPlaceImg(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
+        placeImage.setPlaceId(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
         placeImages.add(placeImage);
     }
 
