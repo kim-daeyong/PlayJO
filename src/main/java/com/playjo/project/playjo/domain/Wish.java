@@ -27,7 +27,7 @@ public class Wish {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private User userWish;
+    private User userId;
 
 //
 //    @ManyToMany
