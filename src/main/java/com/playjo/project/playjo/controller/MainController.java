@@ -2,6 +2,7 @@ package com.playjo.project.playjo.controller;
 
 
 import com.playjo.project.playjo.domain.Place;
+import com.playjo.project.playjo.service.CategoryService;
 import com.playjo.project.playjo.service.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,10 +26,12 @@ public class MainController {
             @RequestParam(name = "searchStr", required = false) String searchStr,
             Model model){
 
-//        List<Place> places1 = placeService.getPlacesRating(page, categoryId, searchKind, searchStr);
-//        model.addAttribute("plcaes1", places1);
-//        List<Place> places2 = placeService.getPlacesRead(page, categoryId, searchKind, searchStr);
-//        model.addAttribute("plcaes2", places2);
+        List<Place> orderReg = placeService.mainPlacesReg(page, searchKind, searchStr);
+        model.addAttribute("place2", orderReg);
+        List<Place> orderReadcount = placeService.mainPlacesReadcount(page, searchKind, searchStr);
+        model.addAttribute("place1", orderReadcount);
+
+
         return "index";
     }
 }

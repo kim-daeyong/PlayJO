@@ -30,6 +30,8 @@ insert into place values(14, '자존심13', '중요14', '찬종14',2,111,now(),'
 insert into place values(15, '자존심14', '중요15', '찬종15',1,111,now(),'에오','10000',3 );
 insert into place values(16, '자존심15', '중요16', '찬종16',2,111,now(),'에오','10000',1 );
 
+-- insert into placeImage values(1,)
+
 
 
 INSERT INTO NOTICE VALUES(1,'공지사항1번입니다',1);

@@ -37,16 +37,16 @@ public class Review {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private User userReview;
+    private User userId;
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "place_id")
-    private Place placeReview;
+    private Place placeId;
 
-    @OneToMany(mappedBy = "reviewReply",fetch=FetchType.LAZY, cascade = {CascadeType.REMOVE})
+    @OneToMany(mappedBy = "reviewId",fetch=FetchType.LAZY, cascade = {CascadeType.REMOVE})
     private List<Reply> replys;
 
-    @OneToMany(mappedBy = "reviewImg",fetch=FetchType.LAZY,
+    @OneToMany(mappedBy = "reviewId",fetch=FetchType.LAZY,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<ReviewImage> reviewImages;
 

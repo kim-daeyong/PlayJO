@@ -46,13 +46,13 @@ public class Place {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "category_id")
-    private Category categoryid;
+    private Category categoryId;
 
-    @OneToMany(mappedBy = "placeImg",fetch=FetchType.LAZY,
+    @OneToMany(mappedBy = "placeId",fetch=FetchType.LAZY,
             cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<PlaceImage> placeImages;
 
-    @OneToMany(mappedBy = "placeReview",fetch=FetchType.LAZY)
+    @OneToMany(mappedBy = "placeId",fetch=FetchType.LAZY)
     private List<Review> reivews;
 
 
@@ -66,11 +66,30 @@ public class Place {
         wishPlace = new ArrayList<>();
     }
 
-//    public void addPlaceImg(PlaceImage placeImg) {
-//        if(placeImages == null)
-//            placeImages = new ArrayList<>();
-//        placeImg.setPlace(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
-//        placeImages.add(placeImg);
+    public void addPlaceImg(PlaceImage placeImage) {
+        if(placeImages == null)
+            placeImages = new ArrayList<>();
+        placeImage.setPlaceId(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
+        placeImages.add(placeImage);
+    }
+
+
+//    public String getShortContent(){
+//        if(content.length() > 100)
+//            return content.substring(0, 100);
+//        else
+//            return content;
 //    }
+//
+//    public String getStripTitle(){
+//        return StringEscapeUtils.escapeHtml4(title);
+//    }
+//
+//    public String getStripContent(){
+////        return Jsoup.parse(content).text();
+//        String str = StringEscapeUtils.escapeHtml4(content);
+//        return str.replaceAll("\n", "<br>");
+//    }
+
 
 }

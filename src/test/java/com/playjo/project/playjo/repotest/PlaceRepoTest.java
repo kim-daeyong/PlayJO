@@ -38,17 +38,17 @@ public class PlaceRepoTest {
 //    }
 
 
-    @Test
-    public void getPlaceCateOrderByRating() throws Exception{
-        Pageable page = PageRequest.of(1, 3);
-        Page<Place> all = placeRepository.getPlacesRatingByCateNo(1, page);
-        System.out.println("place cate 1");
-        System.out.println("전체 건수 : " + all.getTotalElements());
-        for(Place place : all){
-            System.out.println("Name,위치 : " + place.getName()+ " " + place.getLocation());
-            System.out.println(" ratingave : " + place.getRatingAvg());
-        }
-    }
+//    @Test
+//    public void getPlaceCateOrderByRating() throws Exception{
+//        Pageable page = PageRequest.of(1, 3);
+//        Page<Place> all = placeRepository.getPlacesRatingByCateNo(1, page);
+//        System.out.println("place cate 1");
+//        System.out.println("전체 건수 : " + all.getTotalElements());
+//        for(Place place : all){
+//            System.out.println("Name,위치 : " + place.getName()+ " " + place.getLocation());
+//            System.out.println(" ratingave : " + place.getRatingAvg());
+//        }
+//    }
 
 //    @Test
 //    public void getPlaceCateOrderByRating() throws Exception{

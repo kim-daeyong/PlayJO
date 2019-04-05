@@ -29,7 +29,7 @@ public class PlaceImage {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "place_id")
-    private Place placeImg;
+    private Place placeId;
 
 
 
