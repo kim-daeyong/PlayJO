@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        .first {
+            width: 720px;
+            height: 150px;
+            padding-top: 60px;
+            padding-bottom: 450px;
+            padding-left: 355px;
+            margin-left: 180px;
+        }
+
+        .container {
+            width: 565px;
+            height: 150px;
+            padding-left: 155px;
+
+        }
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .carousel-inner img {
+            width: 100%; /* Set width to 100% */
+            margin: auto;
+            min-height: 200px;
+        }
+
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media ( max-width : 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#myNavbar"></button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+            <a class="navbar-brand" href="#" style="width : 138px; margin-left:930px;">관리자페이지</a>
+            <a class="navbar-brand" href="#"style = "padding-left : 35px">등록하기</a>
+            <a class="navbar-brand" href="#"style = "padding-left : 35px">사용자이름</a>
+            <a class="navbar-brand" href="#"style = "padding-left : 35px">로그아웃</a>
+
+
+            <ul class="nav navbar-nav navbar-right">
+
+
+
+                <!--    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+                         Login</a></li> -->
+            </ul>
+        </div>
+
+        <a class="navbar-brand" href="#" style="width : 138px; margin-left:350px;">게시물관리</a>
+        <a class="navbar-brand" href="#"style = "padding-left : 130px">회원관리</a>
+        <a class="navbar-brand" href="#"style = "padding-left : 130px">공지관리</a>
+        <a class="navbar-brand" href="#"style = "padding-left : 130px">데이터관리</a>
+
+
+    </div>
+
+    </ul>
+    </div>
+    </div>
+</nav>
+<div class="first">
+    <div>
+        <h1>공지사항 글쓰기</h1>
+    </div>
+    <div>
+        <tr>
+            <td>&nbsp;</td>
+
+            <td><textarea name="memo" cols="50" rows="13"></textarea></td>
+            <td>&nbsp;</td>
+        </tr>
+
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-left">취소</button>
+                <button type="button" class="btn btn-light">등록</button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="container-fluid text-center" style="padding-top:25px; margin-top : 20px;">
+    <p>PlayJO</p>
+</footer>
+
+
+</body>
+</html>
