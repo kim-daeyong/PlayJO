@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        .first {
+            width: 675px;
+            height: 150px;
+            padding-top: 20px;
+            padding-bottom: 450px;
+            padding-left: 355px;
+            padding-right: 265px;
+            margin-left: 220px;
+        }
+
+        .second {
+            width: 260px;
+            padding-left: 10px;
+            margin-left: 60px;
+        }
+
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .carousel-inner img {
+            width: 100%; /* Set width to 100% */
+            margin: auto;
+            min-height: 200px;
+        }
+
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media ( max-width : 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<nav class="navbar navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#myNavbar"></button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+            <a class="navbar-brand" href="#"
+               style="width: 138px; margin-left: 930px;">관리자페이지</a> <a
+                class="navbar-brand" href="#" style="padding-left: 35px">등록하기</a> <a
+                class="navbar-brand" href="#" style="padding-left: 35px">사용자이름</a>
+            <a class="navbar-brand" href="#" style="padding-left: 35px">로그아웃</a>
+
+
+            <ul class="nav navbar-nav navbar-right">
+
+
+
+                <!--    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+                      Login</a></li> -->
+            </ul>
+        </div>
+
+        <a class="navbar-brand" href="#"
+           style="width: 138px; margin-left: 350px;">게시물관리</a> <a
+            class="navbar-brand" href="#" style="padding-left: 130px">회원관리</a> <a
+            class="navbar-brand" href="#" style="padding-left: 130px">공지관리</a> <a
+            class="navbar-brand" href="#" style="padding-left: 130px">데이터관리</a>
+
+
+    </div>
+</nav>
+
+
+<div>
+    <h1 style="margin-left: 500px">공지사항 관리</h1>
+</div>
+<div class="first">
+    <table>
+        <tr>
+            <p style="height: 35px; width: 600px; margin-bottom: 0px;">
+                공지사항 관리 1 입니다.공지사항 관리 1 입니다 <a class="btn btn-default"
+                                               style="margin-left: 10; margin-left: 160px;">삭제</a>
+            </p>
+            <br>
+            <p style="height: 35px; width: 600px; margin-bottom: 0px;">
+                공지사항 관리 2 입니다.공지사항 관리 2 입니다 <a class="btn btn-default"
+                                               style="margin-left: 10; margin-left: 160px;">삭제</a>
+            </p>
+            <br>
+            <p style="height: 35px; width: 600px; margin-bottom: 0px;">
+                공지사항 관리 3 입니다.공지사항 관리 3 입니다 <a class="btn btn-default"
+                                               style="margin-left: 10; margin-left: 160px;">삭제</a>
+            </p>
+            <br>
+            <p style="height: 35px; width: 600px; margin-bottom: 0px;">
+                공지사항 관리 4 입니다.공지사항 관리 4 입니다 <a class="btn btn-default"
+                                               style="margin-left: 10; margin-left: 160px;">삭제</a>
+            </p>
+            <br>
+            <p style="height: 35px; width: 600px; margin-bottom: 0px;">
+                공지사항 관리 5 입니다.공지사항 관리 5 입니다 <a class="btn btn-default"
+                                               style="margin-left: 10; margin-left: 160px;">삭제</a>
+            </p>
+            <br>
+            <p style="height: 35px; width: 600px; margin-bottom: 0px;">
+                공지사항 관리 6 입니다.공지사항 관리 6 입니다 <a class="btn btn-default"
+                                               style="margin-left: 10; margin-left: 160px;">삭제</a>
+            </p>
+            <br>
+            <p style="height: 35px; width: 600px; margin-bottom: 0px;">
+                공지사항 관리 7 입니다.공지사항 관리 7 입니다 <a class="btn btn-default"
+                                               style="margin-left: 10; margin-left: 160px;">삭제</a>
+            </p>
+            <br>
+
+
+        </tr>
+    </table>
+    <div class="second">
+        <nav style="width: 440px; margin-left: 28px;">
+            <ul class="pagination">
+                <li><a href="#" aria-label="Previous"> <span
+                        aria-hidden="true">&laquo;</span>
+                </a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+
+                <li><a href="#" aria-label="Next"> <span
+                        aria-hidden="true">&raquo;</span> <a class="btn btn-default"
+                                                             style="margin-left: 180px;">글쓰기</a>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+<footer class="container-fluid text-center" style="padding-top: 85px;">
+    <p>PlayJO</p>
+</footer>
+
+</body>
+</html>

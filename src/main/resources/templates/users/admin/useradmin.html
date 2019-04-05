@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        table {
+            width: 120%;
+        }
+
+        .a {
+            width: 820px;
+            height: 180px;
+            padding-bottom: 225px;
+            margin-left: 400px;
+            border: 1px solid black;
+        }
+        .b {
+            width: 820px;
+            height: 180px;
+            padding-bottom: 270px;
+            border: 1px solid black;
+
+        }
+
+        /* .second {
+           width: 270px;
+           padding-left: 10px;
+           margin-left: 130px;
+        } */
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+
+        .carousel-inner img {
+            width: 100%; /* Set width to 100% */
+            margin: auto;
+            min-height: 200px;
+        }
+
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media ( max-width : 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+    </style>
+
+
+    <style>
+        .input-group-addon:hover {
+            cursor: pointer;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+<nav class="navbar navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#myNavbar"></button>
+            <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+            <a class="navbar-brand" href="#" style="width : 138px; margin-left:930px;">관리자페이지</a>
+            <a class="navbar-brand" href="#"style = "padding-left : 35px">등록하기</a>
+            <a class="navbar-brand" href="#"style = "padding-left : 35px">사용자이름</a>
+            <a class="navbar-brand" href="#"style = "padding-left : 35px">로그아웃</a>
+
+
+            <ul class="nav navbar-nav navbar-right">
+
+
+
+                <!--    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+                         Login</a></li> -->
+            </ul>
+        </div>
+
+        <a class="navbar-brand" href="#" style="width : 138px; margin-left:350px;">게시물관리</a>
+        <a class="navbar-brand" href="#"style = "padding-left : 130px">회원관리</a>
+        <a class="navbar-brand" href="#"style = "padding-left : 130px">공지관리</a>
+        <a class="navbar-brand" href="#"style = "padding-left : 130px">데이터관리</a>
+
+
+    </div>
+</nav>
+
+
+<div>
+    <h1 style="margin-left:350px;">회원관리</h1>
+</div>
+
+<div style="margin-left:500px; margin-right:500px;margin-top:20px; width:445px;padding-left:190px;">
+    <form name="mysearchbar" action="/search" method="get">
+        <div class="input-group">
+            <input name="q" type="text" class="form-control" />
+            <div class="input-group-addon">
+               <span class="glyphicon glyphicon-search"
+                     onclick="document.mysearchbar.submit()"></span>
+            </div>
+        </div>
+    </form>
+
+    <br />
+</div>
+
+
+<div class="a">
+    <h4 style="margin-left:18px;">회원리스트</h4>
+    <table style="margin-left:48px;">
+        <thead>
+        <tr>
+            <th>Lorem</th>
+            <th>Ipsum</th>
+            <th>Dolor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Lorem</td>
+            <td>Ipsum</td>
+            <td>Dolor</td>
+        </tr>
+        <tr>
+            <td>Lorem</td>
+            <td>Ipsum</td>
+            <td>Dolor</td>
+        </tr>
+        <tr>
+            <td>Lorem</td>
+            <td>Ipsum</td>
+            <td>Dolor</td>
+        </tr>
+        <tr>
+            <td>Lorem</td>
+            <td>Ipsum</td>
+            <td>Dolor</td>
+        </tr>
+        <tr>
+            <td>Lorem</td>
+            <td>Ipsum</td>
+            <td>Dolor</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div class="second">
+        <nav style="width:240px; margin-left:335px;">
+            <ul class="pagination">
+                <li><a href="#" aria-label="Previous"> <span
+                        aria-hidden="true">&laquo;</span>
+                </a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+
+                <li><a href="#" aria-label="Next"> <span
+                        aria-hidden="true">&raquo;</span>
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="b">
+        <h3 style="margin-left:18px;">회원정보</h3><br>
+        <div>
+            <b style="margin-left:35px;">회원이름 : </b>
+            <b style="margin-left:180px;">이메일 : </b><br>
+        </div>
+        <h4 style="margin-left:35px;">작성글</h4>
+        <h5 style="margin-left:35px;">작성글1입니다.작성글1입니다.작성글1입니다.작성글1입니다.작성글1입니다.작성글1입니다.작성글1입니다.작성글1입니다.</h5>
+        <h5 style="margin-left:35px;">작성글2입니다.작성글2입니다.작성글2입니다.작성글2입니다.작성글2입니다.작성글2입니다.작성글2입니다.작성글2입니다.</h5>
+        <h5 style="margin-left:35px;">작성글3입니다.작성글3입니다.작성글3입니다.작성글3입니다.작성글3입니다.작성글3입니다.작성글3입니다.작성글3입니다.</h5>
+
+
+
+
+        <div class="second">
+            <nav style="width:240px; margin-left:286px;">
+                <ul class="pagination">
+                    <li><a href="#" aria-label="Previous"> <span
+                            aria-hidden="true">&laquo;</span>
+                    </a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+
+                    <li><a href="#" aria-label="Next"> <span
+                            aria-hidden="true">&raquo;</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+        <a class="btn btn-default"
+           style="margin-left:737px;border-top-width:1px;">정보삭제</a>
+    </div>
+
+</div>
+<div>
+    <footer class="container-fluid text-center" style="padding-top:25px; margin-top:380px">
+        <p>PlayJO</p>
+    </footer>
+</div>
+
+</body>
+</html>
