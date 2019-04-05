@@ -13,11 +13,6 @@ public class PlaceRepositoryImpl extends QuerydslRepositorySupport implements Pl
     }
 
     @Override
-    public List<Place> getPlaces(Long categoryId, int start, int limit, String searchKind, String searchStr) {
-        return null;
-    }
-
-    @Override
     public Long getPlaceReadcount(Long categoryId, String searchKind, String searchStr) {
         return null;
     }
@@ -34,4 +29,34 @@ public class PlaceRepositoryImpl extends QuerydslRepositorySupport implements Pl
 //                    .or(qPost.content.like("%" + searchStr + "%")));
 //        }
 //    }
+
+    public List<Place> getPlacesId(Long categoryId, int start, int limit, String searchKind, String searchStr){
+
+        return null;
+    }
+
+    @Override
+    public List<Place> getMainPlaces(Long categoryId, int start, int limit, String searchKind, String searchStr) {
+        return null;
+    }
+
+    @Override
+    public List<Place> getPlacesReadcount(Long categoryId, int start, int limit, String searchKind, String searchStr) {
+        return null;
+    }
+
+    @Override
+    public List<Place> getPlacesRatingAvg(Long categoryId, int start, int limit, String searchKind, String searchStr) {
+        return null;
+    }
+
+    @Override
+    public List<Place> getMainPlacesId(int start, int limit, String searchKind, String searchStr) {
+        return null;
+    }
+
+    @Override
+    public List<Place> getMainPlacesReadcount(int start, int limit, String searchKind, String searchStr) {
+        return null;
+    }
 }

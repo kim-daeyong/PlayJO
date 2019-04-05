@@ -15,7 +15,7 @@ public interface NoticeRepository extends JpaRepository<Notice,Long> {
 
 
     //Notice의 리스트를 불러온다.
-    @Query("SELECT n FROM Notice n inner join n.userNotice order by n.id desc")
+    @Query("SELECT n FROM Notice n inner join n.userId order by n.id desc")
     Page<Notice> getNotice(Pageable pageable);
 
 

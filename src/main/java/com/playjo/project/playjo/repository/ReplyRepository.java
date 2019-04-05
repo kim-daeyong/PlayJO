@@ -32,7 +32,7 @@ Page<Reply> getReplyByReplyNo(@Param("id")Long id,Pageable pageable);*/
 
 
 
-    @Query("SELECT rr FROM Reply rr where rr.reviewReply.id = :id order by rr.id desc")
+    @Query("SELECT rr FROM Reply rr where rr.reviewId.id = :id order by rr.id desc")
     Page<Reply> getReplyByReplyNo(@Param("id") Long id, Pageable pageable);
 
 }
