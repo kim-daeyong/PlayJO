@@ -13,6 +13,6 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 자동증가.
     private Long id;
-    @Column(length = 255)
+    @Column(length = 45)
     private String name;
 }
