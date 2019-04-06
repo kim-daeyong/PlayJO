@@ -26,10 +26,11 @@ public class MainController {
             @RequestParam(name = "searchStr", required = false) String searchStr,
             Model model){
 
-        List<Place> orderReg = placeService.mainPlacesReg(page, searchKind, searchStr);
-        model.addAttribute("place2", orderReg);
         List<Place> orderReadcount = placeService.mainPlacesReadcount(page, searchKind, searchStr);
         model.addAttribute("place1", orderReadcount);
+        List<Place> orderReg = placeService.mainPlacesReg(page, searchKind, searchStr);
+        model.addAttribute("place2", orderReg);
+
 
 
         return "index";

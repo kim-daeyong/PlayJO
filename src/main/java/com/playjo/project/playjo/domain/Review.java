@@ -56,12 +56,20 @@ public class Review {
         reviewImages = new ArrayList<>();
     }
 
+    // 리뷰 리스트에서 짧게 보이는 것
+    public String getShortContent(){
+        if(content.length() > 100)
+            return content.substring(0, 100);
+        else
+            return content;
+    }
 
-//        public void addReviewImg(ReviewImage reviewImage) {
-//        if(reviewImage == null)
-//            reviewImage = new ArrayList<>();
-//            reviewImage.setReview(this); // 쌍방향이기 때문에 this를 참조하도록 한다.
-//            reviewImage.add(reviewImage);
-//    }
+
+        public void addReviewImg(ReviewImage reviewImage) {
+        if(reviewImages == null)
+            reviewImages = new ArrayList<>();
+            reviewImage.setReviewId(this);
+            reviewImages.add(reviewImage);
+    }
 
 }

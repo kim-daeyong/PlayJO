@@ -5,9 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name = "user")
@@ -19,9 +17,6 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private Long id;
-
-    @Column
-    private int role;
 
     @Column(length = 255)
     private String email;
@@ -55,13 +50,27 @@ public class User {
     private List<Wish> wishs;
 
 
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(name = "user_roles",
+            joinColumns = {@JoinColumn(name = "user_id",referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")}
+    )
+    private Set<Role> roles;
+
     public User() {
         regDate = new Date();
         reviews = new ArrayList<>();
         notices = new ArrayList<>();
         wishs = new ArrayList<>();
         replys = new ArrayList<>();
+        roles = new HashSet<>();
 
+    }
+
+    public void addRole(Role role) {
+        if(roles == null)
+            roles = new HashSet<>();
+        roles.add(role);
     }
 
 }
