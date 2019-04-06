@@ -43,10 +43,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET,"/api/reply").permitAll()
                 .antMatchers(HttpMethod.POST,"/api/reply").permitAll()
 //                .antMatchers("/users/delete").permitAll()
-//                .antMatchers("/users/join").permitAll()
+                .antMatchers("/users/join").permitAll()
                 .antMatchers("/users/welcome").permitAll()
                 .antMatchers("/users/login").permitAll()
                 .antMatchers("/users/**").hasAnyRole("USER", "ADMIN")
+                
                 .antMatchers("/places/images/**").permitAll()
                 .antMatchers("/places/placewrite").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/places/{id}").permitAll()

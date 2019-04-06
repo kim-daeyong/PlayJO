@@ -18,9 +18,6 @@ public class User {
     @Column(name="id")
     private Long id;
 
-    @Column
-    private int role;
-
     @Column(length = 255)
     private String email;
 
