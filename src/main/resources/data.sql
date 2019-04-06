@@ -1,15 +1,22 @@
 
 
-insert  into user values(1,19900108 , 'kdy2353@naver.com', 'kim','daeyong','123456',now(),1);
-insert  into user values(2,1011, 'choi@naver.com', 'choi','bin','123456',now(),2);
-insert  into user values(3, 1010, 'kdy2353@naver.com', 'choi','wono','123456',now(),2);
-insert  into user values(4, 1011, 'cn0@naver.com', 'seo','chungwon','123456',now(),2);
-insert  into user values(5, 0801, 'andy@naver.com', 'min','andy','123456',now(),2);
-insert  into user values(6, 0801, 'dabinchoi@naver.com', 'choi','dabin','123456',now(),1);
+insert  into user values(1,19900108 , 'kdy2353@naver.com', 'kim','daeyong','123456',now());
+insert  into user values(2,1011, 'choi@naver.com', 'choi','bin','123456',now());
+insert  into user values(3, 1010, 'kdy2353@naver.com', 'choi','wono','123456',now());
+insert  into user values(4, 1011, 'cn0@naver.com', 'seo','chungwon','123456',now());
+insert  into user values(5, 0801, 'andy@naver.com', 'min','andy','123456',now());
+insert  into user values(6, 0801, 'dabinchoi@naver.com', 'choi','dabin','123456',now());
 
 
 insert  into roles values(1, 'ADMIN');
 insert  into roles values(2, 'USER');
+
+insert into user_roles values(1,1);
+insert into user_roles values(2,2);
+insert into user_roles values(3,2);
+insert into user_roles values(4,2);
+insert into user_roles values(5,2);
+insert into user_roles values(6,1);
 
 
 insert into category values(1, 'hotel');
