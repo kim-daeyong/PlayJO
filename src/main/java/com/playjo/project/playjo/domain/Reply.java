@@ -24,7 +24,7 @@ public class Reply {
     @Lob
     private String content;
 
-    @Column(length = 255)
+    @Column(length = 45)
     private String nickName;
 
     @Column(name = "regdate")
