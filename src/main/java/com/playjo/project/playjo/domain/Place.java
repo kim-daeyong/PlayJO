@@ -23,12 +23,6 @@ public class Place {
     @Column(name ="name")
     private String name;
 
-    @Column
-    private String value1;
-
-    @Column
-    private String value2;
-
     @Lob
     private String location;
 
@@ -55,6 +49,8 @@ public class Place {
     @OneToMany(mappedBy = "placeId",fetch=FetchType.LAZY)
     private List<Review> reivews;
 
+    @OneToMany(mappedBy = "placeId",fetch=FetchType.LAZY)
+    private List<PlaceOption> placeOptions;
 
     @ManyToMany(mappedBy = "places")
     private List<Wish> wishPlace;
@@ -64,6 +60,7 @@ public class Place {
         placeImages = new ArrayList<>();
         reivews = new ArrayList<>();
         wishPlace = new ArrayList<>();
+        placeOptions = new ArrayList<>();
     }
 
     public void addPlaceImg(PlaceImage placeImage) {

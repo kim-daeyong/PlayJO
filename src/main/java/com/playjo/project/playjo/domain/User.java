@@ -49,6 +49,10 @@ public class User {
     @OneToMany(mappedBy = "userId",fetch=FetchType.LAZY)
     private List<Wish> wishs;
 
+    @OneToMany(mappedBy = "userId",fetch=FetchType.LAZY)
+    private List<Friend> friends;
+
+
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "user_roles",
@@ -64,6 +68,7 @@ public class User {
         wishs = new ArrayList<>();
         replys = new ArrayList<>();
         roles = new HashSet<>();
+        friends = new ArrayList<>();
 
     }
 
