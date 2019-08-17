@@ -1,4 +1,4 @@
-package com.playjo.project.playjo.service;
+package com.playjo.project.playjo.service.impl;
 
 
 import lombok.RequiredArgsConstructor;
@@ -6,5 +6,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ReplyService {
+public class ReviewImgService {
 }

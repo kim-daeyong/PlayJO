@@ -2,8 +2,7 @@ package com.playjo.project.playjo.controller;
 
 
 import com.playjo.project.playjo.domain.Place;
-import com.playjo.project.playjo.service.CategoryService;
-import com.playjo.project.playjo.service.PlaceService;
+import com.playjo.project.playjo.service.impl.PlaceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

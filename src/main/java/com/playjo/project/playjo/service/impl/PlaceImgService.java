@@ -1,4 +1,4 @@
-package com.playjo.project.playjo.service;
+package com.playjo.project.playjo.service.impl;
 
 
 import com.playjo.project.playjo.domain.PlaceImage;

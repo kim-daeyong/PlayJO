@@ -1,7 +1,7 @@
 package com.playjo.project.playjo.controller.api;
 
 
-import com.playjo.project.playjo.service.ReplyService;
+import com.playjo.project.playjo.service.impl.ReplyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
