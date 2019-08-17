@@ -2,7 +2,7 @@ package com.playjo.project.playjo.controller;
 
 
 import com.playjo.project.playjo.domain.Role;
-import com.playjo.project.playjo.service.RoleService;
+import com.playjo.project.playjo.service.impl.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

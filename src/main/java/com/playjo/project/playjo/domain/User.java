@@ -21,13 +21,13 @@ public class User {
     @Column(length = 255)
     private String email;
 
-    @Column(length = 255)
+    @Column(length = 45)
     private String name;
 
-    @Column(length = 100)
+    @Column(length = 45)
     private String nickName;
 
-    @Column(length = 100)
+    @Column(length = 20)
     private String password;
 
     @Column
@@ -49,6 +49,10 @@ public class User {
     @OneToMany(mappedBy = "userId",fetch=FetchType.LAZY)
     private List<Wish> wishs;
 
+    @OneToMany(mappedBy = "userId",fetch=FetchType.LAZY)
+    private List<Friend> friends;
+
+
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "user_roles",
@@ -64,6 +68,7 @@ public class User {
         wishs = new ArrayList<>();
         replys = new ArrayList<>();
         roles = new HashSet<>();
+        friends = new ArrayList<>();
 
     }
 

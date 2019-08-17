@@ -20,7 +20,7 @@ public class Review {
     @Column(name="id")
     private Long id;
 
-    @Column(length = 255)
+    @Column(length = 45)
     private String nickName;
 
     @Column

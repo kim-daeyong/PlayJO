@@ -1,7 +1,7 @@
 package com.playjo.project.playjo.controller;
 
 
-import com.playjo.project.playjo.service.UserService;
+import com.playjo.project.playjo.service.impl.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
 }
