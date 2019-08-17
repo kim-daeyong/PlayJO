@@ -15,10 +15,11 @@
 * Mysql
 * Spring Security
 * JPA
-* Bootstraps
+* Bootstrapss
 * Maven
 * Lombok
 * thymeleaf
+* AWS
 
 -----------------
 
