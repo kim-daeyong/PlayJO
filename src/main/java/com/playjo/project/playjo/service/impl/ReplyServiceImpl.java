@@ -6,5 +6,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class ReplyService {
+public class ReplyServiceImpl {
 }
