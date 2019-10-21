@@ -1,8 +1,10 @@
 package com.playjo.project.playjo.domain;
 
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -10,6 +12,8 @@ import javax.persistence.*;
 @Table(name="friend")
 @Getter
 @Setter
+@ToString
+@Builder
 public class Friend {
 
     @Id

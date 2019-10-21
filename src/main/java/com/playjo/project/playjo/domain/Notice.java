@@ -1,8 +1,11 @@
 package com.playjo.project.playjo.domain;
 
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
 import javax.persistence.Id;
 import javax.persistence.Entity;
 
@@ -14,7 +17,8 @@ import java.util.List;
 @Table(name = "notice")
 @Setter
 @Getter
-
+@ToString
+@Builder
 public class Notice {
 
     @Id

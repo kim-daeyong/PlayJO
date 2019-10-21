@@ -2,8 +2,10 @@ package com.playjo.project.playjo.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,6 +14,8 @@ import java.util.Date;
 @Table(name = "reply")
 @Setter
 @Getter
+@ToString
+@Builder
 public class Reply {
 
 
