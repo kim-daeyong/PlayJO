@@ -1,7 +1,10 @@
 package com.playjo.project.playjo.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
 import javax.persistence.Id;
 
 import javax.persistence.*;
@@ -13,6 +16,8 @@ import java.util.List;
 @Table(name = "category")
 @Setter
 @Getter
+@ToString
+@Builder
 public class Category {
 
     @Id
