@@ -15,12 +15,12 @@
 * Mysql
 * Spring Security
 * JPA
-* Bootstrapss
 * Maven
 * Lombok
 * thymeleaf
-* AWS
+* JQuery
 
+* 프론트는 뷰나 리액트로 차후 변경
 -----------------
 
 ### DB
