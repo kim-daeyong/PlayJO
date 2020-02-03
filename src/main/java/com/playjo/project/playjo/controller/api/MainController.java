@@ -1,4 +1,4 @@
-package com.playjo.project.playjo.controller;
+package com.playjo.project.playjo.controller.api;
 
 
 import com.playjo.project.playjo.domain.Place;
@@ -8,11 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 
-@Controller
+@RestController
 public class MainController {
     @Autowired
     PlaceService placeService;
